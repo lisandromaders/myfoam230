@@ -1,0 +1,20 @@
+LOCAL_OBJECTS = \
+combustionModel.o\
+psiCombustionModel.o\
+psiCombustionModelNew.o\
+psiThermoCombustion.o\
+psiChemistryCombustion.o\
+rhoCombustionModel.o\
+rhoCombustionModelNew.o\
+rhoThermoCombustion.o\
+rhoChemistryCombustion.o\
+diffusions.o\
+infinitelyFastChemistrys.o\
+PaSRs.o\
+laminars.o\
+consumptionSpeed.o\
+reactionRateFlameArea.o\
+reactionRateFlameAreaNew.o\
+relaxation.o\
+FSDs.o\
+noCombustions.o

@@ -1,0 +1,14 @@
+DEPENDENCIES = \
+chemistryReaders/chemkinReader/chemkinReader.dep\
+chemistryReaders/chemkinReader/chemkinLexer.dep\
+chemistryReaders/chemistryReader/makeChemistryReaders.dep\
+mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep\
+psiReactionThermo/psiReactionThermo.dep\
+psiReactionThermo/psiReactionThermos.dep\
+psiuReactionThermo/psiuReactionThermo.dep\
+psiuReactionThermo/psiuReactionThermos.dep\
+rhoReactionThermo/rhoReactionThermo.dep\
+rhoReactionThermo/rhoReactionThermos.dep\
+derivedFvPatchFields/fixedUnburntEnthalpy/fixedUnburntEnthalpyFvPatchScalarField.dep\
+derivedFvPatchFields/gradientUnburntEnthalpy/gradientUnburntEnthalpyFvPatchScalarField.dep\
+derivedFvPatchFields/mixedUnburntEnthalpy/mixedUnburntEnthalpyFvPatchScalarField.dep

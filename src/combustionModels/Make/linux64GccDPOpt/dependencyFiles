@@ -1,0 +1,20 @@
+DEPENDENCIES = \
+combustionModel/combustionModel.dep\
+psiCombustionModel/psiCombustionModel/psiCombustionModel.dep\
+psiCombustionModel/psiCombustionModel/psiCombustionModelNew.dep\
+psiCombustionModel/psiThermoCombustion/psiThermoCombustion.dep\
+psiCombustionModel/psiChemistryCombustion/psiChemistryCombustion.dep\
+rhoCombustionModel/rhoCombustionModel/rhoCombustionModel.dep\
+rhoCombustionModel/rhoCombustionModel/rhoCombustionModelNew.dep\
+rhoCombustionModel/rhoThermoCombustion/rhoThermoCombustion.dep\
+rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep\
+diffusion/diffusions.dep\
+infinitelyFastChemistry/infinitelyFastChemistrys.dep\
+PaSR/PaSRs.dep\
+laminar/laminars.dep\
+FSD/reactionRateFlameAreaModels/consumptionSpeed/consumptionSpeed.dep\
+FSD/reactionRateFlameAreaModels/reactionRateFlameArea/reactionRateFlameArea.dep\
+FSD/reactionRateFlameAreaModels/reactionRateFlameArea/reactionRateFlameAreaNew.dep\
+FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep\
+FSD/FSDs.dep\
+noCombustion/noCombustions.dep

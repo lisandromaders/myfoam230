@@ -1,0 +1,7 @@
+LOCAL_OBJECTS = \
+basicChemistryModel.o\
+psiChemistryModel.o\
+psiChemistryModels.o\
+rhoChemistryModel.o\
+rhoChemistryModels.o\
+makeChemistrySolvers.o

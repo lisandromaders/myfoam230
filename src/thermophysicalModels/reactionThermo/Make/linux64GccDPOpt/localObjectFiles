@@ -1,0 +1,14 @@
+LOCAL_OBJECTS = \
+chemkinReader.o\
+chemkinLexer.o\
+makeChemistryReaders.o\
+basicMultiComponentMixture.o\
+psiReactionThermo.o\
+psiReactionThermos.o\
+psiuReactionThermo.o\
+psiuReactionThermos.o\
+rhoReactionThermo.o\
+rhoReactionThermos.o\
+fixedUnburntEnthalpyFvPatchScalarField.o\
+gradientUnburntEnthalpyFvPatchScalarField.o\
+mixedUnburntEnthalpyFvPatchScalarField.o

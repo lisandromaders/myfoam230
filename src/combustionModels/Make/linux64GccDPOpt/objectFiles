@@ -1,0 +1,20 @@
+OBJECTS = \
+$(OBJECTS_DIR)/combustionModel.o\
+$(OBJECTS_DIR)/psiCombustionModel.o\
+$(OBJECTS_DIR)/psiCombustionModelNew.o\
+$(OBJECTS_DIR)/psiThermoCombustion.o\
+$(OBJECTS_DIR)/psiChemistryCombustion.o\
+$(OBJECTS_DIR)/rhoCombustionModel.o\
+$(OBJECTS_DIR)/rhoCombustionModelNew.o\
+$(OBJECTS_DIR)/rhoThermoCombustion.o\
+$(OBJECTS_DIR)/rhoChemistryCombustion.o\
+$(OBJECTS_DIR)/diffusions.o\
+$(OBJECTS_DIR)/infinitelyFastChemistrys.o\
+$(OBJECTS_DIR)/PaSRs.o\
+$(OBJECTS_DIR)/laminars.o\
+$(OBJECTS_DIR)/consumptionSpeed.o\
+$(OBJECTS_DIR)/reactionRateFlameArea.o\
+$(OBJECTS_DIR)/reactionRateFlameAreaNew.o\
+$(OBJECTS_DIR)/relaxation.o\
+$(OBJECTS_DIR)/FSDs.o\
+$(OBJECTS_DIR)/noCombustions.o
