@@ -51,12 +51,13 @@ namespace Foam
 
 //creating the new combination of models, including the FGMTransport model
 
+
 makeThermo
 (
     psiThermo,
     hePsiThermo,
     pureMixture,
-    FGMTransport,
+    constTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -69,18 +70,6 @@ makeThermo
     hePsiThermo,
     pureMixture,
     FGMTransport,
-    sensibleEnthalpy,
-    janafThermo,
-    perfectGas,
-    specie
-);
-
-makeThermo
-(
-    psiThermo,
-    hePsiThermo,
-    pureMixture,
-    constTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -131,6 +120,18 @@ makeThermo
     psiThermo,
     hePsiThermo,
     pureMixture,
+    FGMTransport,
+    sensibleInternalEnergy,
+    eConstThermo,
+    perfectGas,
+    specie
+);
+
+makeThermo
+(
+    psiThermo,
+    hePsiThermo,
+    pureMixture,
     sutherlandTransport,
     sensibleInternalEnergy,
     eConstThermo,
@@ -144,6 +145,18 @@ makeThermo
     hePsiThermo,
     pureMixture,
     constTransport,
+    sensibleInternalEnergy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeThermo
+(
+    psiThermo,
+    hePsiThermo,
+    pureMixture,
+    FGMTransport,
     sensibleInternalEnergy,
     hConstThermo,
     perfectGas,

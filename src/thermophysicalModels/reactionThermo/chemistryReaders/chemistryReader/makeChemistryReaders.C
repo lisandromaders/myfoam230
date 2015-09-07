@@ -40,17 +40,25 @@ namespace Foam
 // Solid chemistry readers based on sensibleEnthalpy
 
 makeChemistryReader(constGasHThermoPhysics);
+makeChemistryReader(FGMGasHThermoPhysics);
 makeChemistryReader(gasHThermoPhysics);
 makeChemistryReader(constIncompressibleGasHThermoPhysics);
+makeChemistryReader(FGMIncompressibleGasHThermoPhysics);
 makeChemistryReader(incompressibleGasHThermoPhysics);
 makeChemistryReader(icoPoly8HThermoPhysics);
 
 makeChemistryReaderType(foamChemistryReader, constGasHThermoPhysics);
+makeChemistryReaderType(foamChemistryReader, FGMGasHThermoPhysics);
 makeChemistryReaderType(foamChemistryReader, gasHThermoPhysics);
 makeChemistryReaderType
 (
     foamChemistryReader,
     constIncompressibleGasHThermoPhysics
+);
+makeChemistryReaderType
+(
+    foamChemistryReader,
+    FGMIncompressibleGasHThermoPhysics
 );
 makeChemistryReaderType(foamChemistryReader, incompressibleGasHThermoPhysics);
 makeChemistryReaderType(foamChemistryReader, icoPoly8HThermoPhysics);
@@ -60,17 +68,25 @@ makeChemistryReaderType(foamChemistryReader, icoPoly8HThermoPhysics);
 // Solid chemistry readers based on sensibleInternalEnergy
 
 makeChemistryReader(constGasEThermoPhysics);
+makeChemistryReader(FGMGasEThermoPhysics);
 makeChemistryReader(gasEThermoPhysics);
 makeChemistryReader(constIncompressibleGasEThermoPhysics);
+makeChemistryReader(FGMIncompressibleGasEThermoPhysics);
 makeChemistryReader(incompressibleGasEThermoPhysics);
 makeChemistryReader(icoPoly8EThermoPhysics);
 
 makeChemistryReaderType(foamChemistryReader, constGasEThermoPhysics);
+makeChemistryReaderType(foamChemistryReader, FGMGasEThermoPhysics);
 makeChemistryReaderType(foamChemistryReader, gasEThermoPhysics);
 makeChemistryReaderType
 (
     foamChemistryReader,
     constIncompressibleGasEThermoPhysics
+);
+makeChemistryReaderType
+(
+    foamChemistryReader,
+    FGMIncompressibleGasEThermoPhysics
 );
 makeChemistryReaderType(foamChemistryReader, incompressibleGasEThermoPhysics);
 makeChemistryReaderType(foamChemistryReader, icoPoly8EThermoPhysics);

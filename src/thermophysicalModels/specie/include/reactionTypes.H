@@ -46,10 +46,15 @@ namespace Foam
     // sensible enthalpy based reactions
     typedef Reaction<constGasHThermoPhysics> constGasHReaction;
 
+    typedef Reaction<FGMGasHThermoPhysics> FGMGasHReaction;
+
     typedef Reaction<gasHThermoPhysics> gasHReaction;
 
     typedef Reaction<constIncompressibleGasHThermoPhysics>
         constIncompressibleGasHReaction;
+
+    typedef Reaction<FGMIncompressibleGasHThermoPhysics>
+        FGMIncompressibleGasHReaction;
 
     typedef Reaction<incompressibleGasHThermoPhysics>
         incompressibleGasHReaction;
@@ -59,10 +64,15 @@ namespace Foam
     // internal ennergy based reactions
     typedef Reaction<constGasEThermoPhysics> constGasEReaction;
 
+    typedef Reaction<FGMGasEThermoPhysics> FGMGasEReaction;
+
     typedef Reaction<gasEThermoPhysics> gasEReaction;
 
     typedef Reaction<constIncompressibleGasEThermoPhysics>
         constIncompressibleGasEReaction;
+
+    typedef Reaction<FGMIncompressibleGasEThermoPhysics>
+        FGMIncompressibleGasEReaction;
 
     typedef Reaction<incompressibleGasEThermoPhysics>
         incompressibleGasEReaction;

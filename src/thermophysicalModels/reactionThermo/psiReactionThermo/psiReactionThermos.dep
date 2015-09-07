@@ -520,6 +520,9 @@ psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.H
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransportI.H
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.C
+psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
+psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
+psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
 psiReactionThermo/psiReactionThermos.dep: lnInclude/homogeneousMixture.H
 psiReactionThermo/psiReactionThermos.dep: lnInclude/homogeneousMixture.C
 psiReactionThermo/psiReactionThermos.dep: lnInclude/inhomogeneousMixture.H
@@ -549,9 +552,6 @@ psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/incompressiblePerfectGasI.H
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/incompressiblePerfectGas.C
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sensibleInternalEnergy.H
-psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
-psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
-psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
 psiReactionThermo/psiReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/icoPolynomial.H
 psiReactionThermo/psiReactionThermos.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.H
 psiReactionThermo/psiReactionThermos.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.C

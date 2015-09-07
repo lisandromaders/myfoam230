@@ -52,6 +52,14 @@ namespace combustionModels
         constGasHThermoPhysics,
         psiCombustionModel
     );
+//FGM implementation
+    makeCombustionTypesThermo
+    (
+        diffusion,
+        psiThermoCombustion,
+        FGMGasHThermoPhysics,
+        psiCombustionModel
+    );
 
     makeCombustionTypesThermo
     (
@@ -66,6 +74,14 @@ namespace combustionModels
         diffusion,
         rhoThermoCombustion,
         constGasHThermoPhysics,
+        rhoCombustionModel
+    );
+//FGM implementation
+    makeCombustionTypesThermo
+    (
+        diffusion,
+        rhoThermoCombustion,
+        FGMGasHThermoPhysics,
         rhoCombustionModel
     );
 

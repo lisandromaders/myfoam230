@@ -523,6 +523,9 @@ psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/s
 psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.H
 psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransportI.H
 psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.C
+psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
+psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
+psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
 psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/absoluteEnthalpy.H
 psiuReactionThermo/psiuReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/absoluteInternalEnergy.H
 psiuReactionThermo/psiuReactionThermos.dep: lnInclude/homogeneousMixture.H

@@ -509,6 +509,9 @@ rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalM
 rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.H
 rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransportI.H
 rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.C
+rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
+rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
+rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
 rhoThermo/rhoThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/icoPolynomial.H
 rhoThermo/rhoThermos.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.H
 rhoThermo/rhoThermos.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.C

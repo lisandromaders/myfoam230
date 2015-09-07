@@ -187,6 +187,9 @@ reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/sutherlandTra
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/specie.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/specieI.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/sutherlandTransport.C
+reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/FGMTransport.H
+reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/FGMTransportI.H
+reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/FGMTransport.C
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/janafThermo.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/janafThermoI.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/janafThermo.C
@@ -219,9 +222,6 @@ reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/sensibleInter
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/constTransport.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/constTransportI.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/constTransport.C
-reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/FGMTransport.H
-reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/FGMTransportI.H
-reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/FGMTransport.C
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/LangmuirHinshelwoodReactionRate.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: lnInclude/LangmuirHinshelwoodReactionRateI.H
 reaction/reactions/makeLangmuirHinshelwoodReactions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Tuple2.H

@@ -523,6 +523,9 @@ rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src
 rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.H
 rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransportI.H
 rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.C
+rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
+rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
+rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
 rhoReactionThermo/rhoReactionThermos.dep: lnInclude/homogeneousMixture.H
 rhoReactionThermo/rhoReactionThermos.dep: lnInclude/homogeneousMixture.C
 rhoReactionThermo/rhoReactionThermos.dep: lnInclude/inhomogeneousMixture.H
@@ -549,9 +552,6 @@ rhoReactionThermo/rhoReactionThermos.dep: lnInclude/singleStepReactingMixtureI.H
 rhoReactionThermo/rhoReactionThermos.dep: lnInclude/singleStepReactingMixture.C
 rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/thermoPhysicsTypes.H
 rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sensibleInternalEnergy.H
-rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
-rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
-rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
 rhoReactionThermo/rhoReactionThermos.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/icoPolynomial.H
 rhoReactionThermo/rhoReactionThermos.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.H
 rhoReactionThermo/rhoReactionThermos.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.C

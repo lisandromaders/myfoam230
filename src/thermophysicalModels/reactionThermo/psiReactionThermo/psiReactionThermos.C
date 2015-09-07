@@ -36,6 +36,7 @@ License
 #include "thermo.H"
 #include "constTransport.H"
 #include "sutherlandTransport.H"
+#include "FGMTransport.H"
 
 #include "homogeneousMixture.H"
 #include "inhomogeneousMixture.H"
@@ -53,7 +54,7 @@ namespace Foam
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-// constTransport, hConstThermo
+// constTransport(or FGMTrasport), hConstThermo
 
 makeReactionThermo
 (
@@ -62,6 +63,19 @@ makeReactionThermo
     hePsiThermo,
     homogeneousMixture,
     constTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    homogeneousMixture,
+    FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -86,8 +100,34 @@ makeReactionThermo
     psiThermo,
     psiReactionThermo,
     hePsiThermo,
+    inhomogeneousMixture,
+    FGMTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
     veryInhomogeneousMixture,
     constTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -196,6 +236,15 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     multiComponentMixture,
+    FGMGasHThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    multiComponentMixture,
     gasHThermoPhysics
 );
 
@@ -217,6 +266,15 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     multiComponentMixture,
+    FGMGasEThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    multiComponentMixture,
     gasEThermoPhysics
 );
 
@@ -230,6 +288,15 @@ makeReactionMixtureThermo
     hePsiThermo,
     reactingMixture,
     constGasHThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    reactingMixture,
+    FGMGasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -260,6 +327,15 @@ makeReactionMixtureThermo
     hePsiThermo,
     reactingMixture,
     constGasEThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    reactingMixture,
+    FGMGasEThermoPhysics
 );
 
 makeReactionMixtureThermo

@@ -41,6 +41,7 @@ Description
 #include "thermo.H"
 
 #include "sutherlandTransport.H"
+#include "FGMTransport.H"
 #include "janafThermo.H"
 #include "perfectGas.H"
 

@@ -51,6 +51,13 @@ namespace Foam
     (
         chemistryModel,
         psiChemistryModel,
+        FGMGasHThermoPhysics
+    );
+
+    makeChemistryModel
+    (
+        chemistryModel,
+        psiChemistryModel,
         gasHThermoPhysics
     );
 
@@ -59,6 +66,13 @@ namespace Foam
         chemistryModel,
         psiChemistryModel,
         constIncompressibleGasHThermoPhysics
+    );
+
+    makeChemistryModel
+    (
+        chemistryModel,
+        psiChemistryModel,
+        FGMIncompressibleGasHThermoPhysics
     );
 
     makeChemistryModel
@@ -87,6 +101,13 @@ namespace Foam
     (
         chemistryModel,
         psiChemistryModel,
+        FGMGasEThermoPhysics
+    );
+
+    makeChemistryModel
+    (
+        chemistryModel,
+        psiChemistryModel,
         gasEThermoPhysics
     );
 
@@ -95,6 +116,13 @@ namespace Foam
         chemistryModel,
         psiChemistryModel,
         constIncompressibleGasEThermoPhysics
+    );
+
+    makeChemistryModel
+    (
+        chemistryModel,
+        psiChemistryModel,
+        FGMIncompressibleGasEThermoPhysics
     );
 
     makeChemistryModel

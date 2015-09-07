@@ -53,18 +53,6 @@ Description
 
 namespace Foam
 {
-    typedef
-    FGMTransport
-    <
-        species::thermo
-        <
-            hConstThermo
-            <
-                perfectGas<specie>
-            >,
-            sensibleEnthalpy
-        >
-    > FGMGasHThermoPhysics;
 
     // thermo physics types based on sensibleEnthalpy
     typedef
@@ -79,6 +67,19 @@ namespace Foam
             sensibleEnthalpy
         >
     > constGasHThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            hConstThermo
+            <
+                perfectGas<specie>
+            >,
+            sensibleEnthalpy
+        >
+    > FGMGasHThermoPhysics;
 
     typedef
     sutherlandTransport
@@ -105,6 +106,19 @@ namespace Foam
             sensibleEnthalpy
         >
     > constIncompressibleGasHThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            hConstThermo
+            <
+                incompressiblePerfectGas<specie>
+            >,
+            sensibleEnthalpy
+        >
+    > FGMIncompressibleGasHThermoPhysics;
 
     typedef
     sutherlandTransport
@@ -150,6 +164,19 @@ namespace Foam
     > constGasEThermoPhysics;
 
     typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            hConstThermo
+            <
+                perfectGas<specie>
+            >,
+            sensibleInternalEnergy
+        >
+    > FGMGasEThermoPhysics;
+
+    typedef
     sutherlandTransport
     <
         species::thermo
@@ -174,6 +201,19 @@ namespace Foam
             sensibleInternalEnergy
         >
     > constIncompressibleGasEThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            hConstThermo
+            <
+                incompressiblePerfectGas<specie>
+            >,
+            sensibleInternalEnergy
+        >
+    > FGMIncompressibleGasEThermoPhysics;
 
     typedef
     sutherlandTransport

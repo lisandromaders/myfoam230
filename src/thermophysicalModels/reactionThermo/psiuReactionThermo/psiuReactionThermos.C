@@ -36,6 +36,7 @@ License
 #include "thermo.H"
 #include "constTransport.H"
 #include "sutherlandTransport.H"
+#include "FGMTransport.H"
 
 #include "absoluteEnthalpy.H"
 #include "absoluteInternalEnergy.H"
@@ -72,8 +73,34 @@ makeReactionThermo
     psiThermo,
     psiuReactionThermo,
     heheuPsiThermo,
+    homogeneousMixture,
+    FGMTransport,
+    absoluteEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
     inhomogeneousMixture,
     constTransport,
+    absoluteEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
+    inhomogeneousMixture,
+    FGMTransport,
     absoluteEnthalpy,
     hConstThermo,
     perfectGas,
@@ -98,8 +125,34 @@ makeReactionThermo
     psiThermo,
     psiuReactionThermo,
     heheuPsiThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
+    absoluteEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
     egrMixture,
     constTransport,
+    absoluteEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
+    egrMixture,
+    FGMTransport,
     absoluteEnthalpy,
     hConstThermo,
     perfectGas,
