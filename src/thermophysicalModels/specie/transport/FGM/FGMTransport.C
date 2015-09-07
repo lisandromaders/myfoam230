@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     |
-    \\  /    A nd           | Copyright (C) 2011 OpenFOAM Foundation
+    \\  /    A nd           | Copyright (C) 2011-2012 OpenFOAM Foundation
      \\/     M anipulation  |
 -------------------------------------------------------------------------------
 License
@@ -32,10 +32,10 @@ template<class Thermo>
 Foam::FGMTransport<Thermo>::FGMTransport(Istream& is)
 :
     Thermo(is),
-    mu_(readScalar(is)),
-    rPr_(1.0/readScalar(is))
+    As_(readScalar(is)),
+    Ts_(readScalar(is))
 {
-    is.check("FGMTransport::FGMTransport(Istream& is)");
+    is.check("FGMTransport<Thermo>::FGMTransport(Istream&)");
 }
 
 
@@ -43,39 +43,44 @@ template<class Thermo>
 Foam::FGMTransport<Thermo>::FGMTransport(const dictionary& dict)
 :
     Thermo(dict),
-    mu_(readScalar(dict.subDict("transport").lookup("mu"))),
-    rPr_(1.0/readScalar(dict.subDict("transport").lookup("Pr")))
+    As_(readScalar(dict.subDict("transport").lookup("As"))),
+    Ts_(readScalar(dict.subDict("transport").lookup("Ts")))
 {}
 
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
 template<class Thermo>
-void Foam::FGMTransport<Thermo>::FGMTransport::write(Ostream& os) const
+void Foam::FGMTransport<Thermo>::write(Ostream& os) const
 {
-    os  << this->name() << endl;
+    os  << this->specie::name() << endl;
     os  << token::BEGIN_BLOCK  << incrIndent << nl;
 
     Thermo::write(os);
 
     dictionary dict("transport");
-    dict.add("mu", mu_);
-    dict.add("Pr", 1.0/rPr_);
+    dict.add("As", As_);
+    dict.add("Ts", Ts_);
     os  << indent << dict.dictName() << dict;
 
     os  << decrIndent << token::END_BLOCK << nl;
 }
 
-
 // * * * * * * * * * * * * * * * IOstream Operators  * * * * * * * * * * * * //
 
 template<class Thermo>
-Foam::Ostream& Foam::operator<<(Ostream& os, const FGMTransport<Thermo>& ct)
+Foam::Ostream& Foam::operator<<
+(
+    Ostream& os,
+    const FGMTransport<Thermo>& st
+)
 {
-    operator<<(os, static_cast<const Thermo&>(ct));
-    os << tab << ct.mu_ << tab << 1.0/ct.rPr_;
+    os << static_cast<const Thermo&>(st) << tab << st.As_ << tab << st.Ts_;
 
-    os.check("Ostream& operator<<(Ostream&, const FGMTransport&)");
+    os.check
+    (
+        "Ostream& operator<<(Ostream&, const FGMTransport<Thermo>&)"
+    );
 
     return os;
 }

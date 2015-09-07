@@ -25,9 +25,15 @@ Class
     Foam::FGMTransport
 
 Description
-    Constant properties Transport package.
+    Transport package using Sutherland's formula.
+
     Templated into a given thermodynamics package (needed for thermal
     conductivity).
+
+    Dynamic viscosity [kg/m.s]
+    \f[
+        \mu = A_s \frac{\sqrt{T}}{1 + T_s / T}
+    \f]
 
 SourceFiles
     FGMTransportI.H
@@ -84,7 +90,7 @@ Ostream& operator<<
 
 
 /*---------------------------------------------------------------------------*\
-                           Class FGMTransport Declaration
+                    Class FGMTransport Declaration
 \*---------------------------------------------------------------------------*/
 
 template<class Thermo>
@@ -94,27 +100,40 @@ class FGMTransport
 {
     // Private data
 
-        //- Constant dynamic viscosity [Pa.s]
-        scalar mu_;
-
-        //- Reciprocal Prandtl Number []
-        scalar rPr_;
+        // Sutherland's coefficients
+        scalar As_, Ts_;
 
 
     // Private Member Functions
 
-        //- Construct from components
-        inline FGMTransport
+        //- Calculate the Sutherland coefficients
+        //  given two viscosities and temperatures
+        inline void calcCoeffs
         (
-            const Thermo& t,
-            const scalar mu,
-            const scalar Pr
+            const scalar mu1, const scalar T1,
+            const scalar mu2, const scalar T2
         );
 
 
 public:
 
     // Constructors
+
+        //- Construct from components
+        inline FGMTransport
+        (
+            const Thermo& t,
+            const scalar As,
+            const scalar Ts
+        );
+
+        //- Construct from two viscosities
+        inline FGMTransport
+        (
+            const Thermo& t,
+            const scalar mu1, const scalar T1,
+            const scalar mu2, const scalar T2
+        );
 
         //- Construct as named copy
         inline FGMTransport(const word&, const FGMTransport&);

@@ -35,17 +35,12 @@ namespace Foam
 {
     // Chemistry solvers based on sensibleEnthalpy
     makeChemistrySolverTypes(psiChemistryModel, constGasHThermoPhysics);
-    makeChemistrySolverTypes(psiChemistryModel, FGMGasHThermoPhysics);
     makeChemistrySolverTypes(psiChemistryModel, gasHThermoPhysics);
+    makeChemistrySolverTypes(psiChemistryModel, FGMgasHThermoPhysics);
     makeChemistrySolverTypes
     (
         psiChemistryModel,
         constIncompressibleGasHThermoPhysics
-    );
-    makeChemistrySolverTypes
-    (
-        psiChemistryModel,
-        FGMIncompressibleGasHThermoPhysics
     );
     makeChemistrySolverTypes
     (
@@ -54,17 +49,12 @@ namespace Foam
     ;
     makeChemistrySolverTypes(psiChemistryModel, icoPoly8HThermoPhysics);
     makeChemistrySolverTypes(rhoChemistryModel, constGasHThermoPhysics);
-    makeChemistrySolverTypes(rhoChemistryModel, FGMGasHThermoPhysics);
     makeChemistrySolverTypes(rhoChemistryModel, gasHThermoPhysics);
+    makeChemistrySolverTypes(rhoChemistryModel, FGMgasHThermoPhysics);
     makeChemistrySolverTypes
     (
         rhoChemistryModel,
         constIncompressibleGasHThermoPhysics
-    );
-    makeChemistrySolverTypes
-    (
-        rhoChemistryModel,
-        FGMIncompressibleGasHThermoPhysics
     );
     makeChemistrySolverTypes
     (
@@ -75,17 +65,12 @@ namespace Foam
 
     // Chemistry solvers based on sensibleInternalEnergy
     makeChemistrySolverTypes(psiChemistryModel, constGasEThermoPhysics);
-    makeChemistrySolverTypes(psiChemistryModel, FGMGasEThermoPhysics);
     makeChemistrySolverTypes(psiChemistryModel, gasEThermoPhysics);
+    makeChemistrySolverTypes(psiChemistryModel, FGMgasEThermoPhysics);
     makeChemistrySolverTypes
     (
         psiChemistryModel,
         constIncompressibleGasEThermoPhysics
-    );
-    makeChemistrySolverTypes
-    (
-        psiChemistryModel,
-        FGMIncompressibleGasEThermoPhysics
     );
     makeChemistrySolverTypes
     (
@@ -94,17 +79,12 @@ namespace Foam
     );
     makeChemistrySolverTypes(psiChemistryModel, icoPoly8EThermoPhysics);
     makeChemistrySolverTypes(rhoChemistryModel, constGasEThermoPhysics);
-    makeChemistrySolverTypes(rhoChemistryModel, FGMGasEThermoPhysics);
     makeChemistrySolverTypes(rhoChemistryModel, gasEThermoPhysics);
+    makeChemistrySolverTypes(rhoChemistryModel, FGMgasEThermoPhysics);
     makeChemistrySolverTypes
     (
         rhoChemistryModel,
         constIncompressibleGasEThermoPhysics
-    );
-    makeChemistrySolverTypes
-    (
-        rhoChemistryModel,
-        FGMIncompressibleGasEThermoPhysics
     );
     makeChemistrySolverTypes
     (

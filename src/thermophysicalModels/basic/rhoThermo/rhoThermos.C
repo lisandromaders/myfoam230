@@ -72,7 +72,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    FGMTransport,
+    sutherlandTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -84,7 +84,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -108,6 +108,18 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
+    FGMTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    perfectGas,
+    specie
+);
+
+makeThermo
+(
+    rhoThermo,
+    heRhoThermo,
+    pureMixture,
     constTransport,
     sensibleEnthalpy,
     hConstThermo,
@@ -120,31 +132,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    FGMTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    rhoConst,
-    specie
-);
-
-makeThermo
-(
-    rhoThermo,
-    heRhoThermo,
-    pureMixture,
     constTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    perfectFluid,
-    specie
-);
-
-makeThermo
-(
-    rhoThermo,
-    heRhoThermo,
-    pureMixture,
-    FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectFluid,
@@ -180,6 +168,18 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
+    sutherlandTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    incompressiblePerfectGas,
+    specie
+);
+
+makeThermo
+(
+    rhoThermo,
+    heRhoThermo,
+    pureMixture,
     FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
@@ -194,7 +194,7 @@ makeThermo
     pureMixture,
     sutherlandTransport,
     sensibleEnthalpy,
-    hConstThermo,
+    janafThermo,
     incompressiblePerfectGas,
     specie
 );
@@ -204,7 +204,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     incompressiblePerfectGas,
@@ -231,7 +231,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    FGMTransport,
+    sutherlandTransport,
     sensibleInternalEnergy,
     hConstThermo,
     perfectGas,
@@ -243,7 +243,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleInternalEnergy,
     hConstThermo,
     perfectGas,
@@ -267,6 +267,18 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
+    FGMTransport,
+    sensibleInternalEnergy,
+    janafThermo,
+    perfectGas,
+    specie
+);
+
+makeThermo
+(
+    rhoThermo,
+    heRhoThermo,
+    pureMixture,
     constTransport,
     sensibleInternalEnergy,
     hConstThermo,
@@ -279,31 +291,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    FGMTransport,
-    sensibleInternalEnergy,
-    hConstThermo,
-    rhoConst,
-    specie
-);
-
-makeThermo
-(
-    rhoThermo,
-    heRhoThermo,
-    pureMixture,
     constTransport,
-    sensibleInternalEnergy,
-    hConstThermo,
-    perfectFluid,
-    specie
-);
-
-makeThermo
-(
-    rhoThermo,
-    heRhoThermo,
-    pureMixture,
-    FGMTransport,
     sensibleInternalEnergy,
     hConstThermo,
     perfectFluid,
@@ -339,6 +327,18 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
+    sutherlandTransport,
+    sensibleInternalEnergy,
+    hConstThermo,
+    incompressiblePerfectGas,
+    specie
+);
+
+makeThermo
+(
+    rhoThermo,
+    heRhoThermo,
+    pureMixture,
     FGMTransport,
     sensibleInternalEnergy,
     hConstThermo,
@@ -353,7 +353,7 @@ makeThermo
     pureMixture,
     sutherlandTransport,
     sensibleInternalEnergy,
-    hConstThermo,
+    janafThermo,
     incompressiblePerfectGas,
     specie
 );
@@ -363,7 +363,7 @@ makeThermo
     rhoThermo,
     heRhoThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleInternalEnergy,
     janafThermo,
     incompressiblePerfectGas,

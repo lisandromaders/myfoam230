@@ -49,15 +49,24 @@ namespace Foam
 
 /* * * * * * * * * * * * * * * * * Enthalpy-based * * * * * * * * * * * * * */
 
-//creating the new combination of models, including the FGMTransport model
-
-
 makeThermo
 (
     psiThermo,
     hePsiThermo,
     pureMixture,
     constTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeThermo
+(
+    psiThermo,
+    hePsiThermo,
+    pureMixture,
+    sutherlandTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -83,7 +92,7 @@ makeThermo
     pureMixture,
     sutherlandTransport,
     sensibleEnthalpy,
-    hConstThermo,
+    janafThermo,
     perfectGas,
     specie
 );
@@ -93,13 +102,12 @@ makeThermo
     psiThermo,
     hePsiThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     perfectGas,
     specie
 );
-
 
 /* * * * * * * * * * * * * * Internal-energy-based * * * * * * * * * * * * * */
 
@@ -120,7 +128,7 @@ makeThermo
     psiThermo,
     hePsiThermo,
     pureMixture,
-    FGMTransport,
+    sutherlandTransport,
     sensibleInternalEnergy,
     eConstThermo,
     perfectGas,
@@ -132,7 +140,7 @@ makeThermo
     psiThermo,
     hePsiThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleInternalEnergy,
     eConstThermo,
     perfectGas,
@@ -156,7 +164,7 @@ makeThermo
     psiThermo,
     hePsiThermo,
     pureMixture,
-    FGMTransport,
+    sutherlandTransport,
     sensibleInternalEnergy,
     hConstThermo,
     perfectGas,
@@ -168,7 +176,7 @@ makeThermo
     psiThermo,
     hePsiThermo,
     pureMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleInternalEnergy,
     hConstThermo,
     perfectGas,
@@ -187,6 +195,17 @@ makeThermo
     specie
 );
 
+makeThermo
+(
+    psiThermo,
+    hePsiThermo,
+    pureMixture,
+    FGMTransport,
+    sensibleInternalEnergy,
+    janafThermo,
+    perfectGas,
+    specie
+);
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 

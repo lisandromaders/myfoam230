@@ -145,12 +145,12 @@ diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalM
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.H
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransportI.H
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/sutherlandTransport.C
-diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/constTransport.H
-diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/constTransportI.H
-diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/constTransport.C
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.H
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransportI.H
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/FGMTransport.C
+diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/constTransport.H
+diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/constTransportI.H
+diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/constTransport.C
 diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/icoPolynomial.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/VectorSpace.H

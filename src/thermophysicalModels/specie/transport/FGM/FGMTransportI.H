@@ -23,32 +23,67 @@ License
 
 \*---------------------------------------------------------------------------*/
 
+#include "specie.H"
+
+// * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
+
+template<class Thermo>
+inline void Foam::FGMTransport<Thermo>::calcCoeffs
+(
+    const scalar mu1, const scalar T1,
+    const scalar mu2, const scalar T2
+)
+{
+    scalar rootT1 = sqrt(T1);
+    scalar mu1rootT2 = mu1*sqrt(T2);
+    scalar mu2rootT1 = mu2*rootT1;
+
+    Ts_ = (mu2rootT1 - mu1rootT2)/(mu1rootT2/T1 - mu2rootT1/T2);
+
+    As_ = mu1*(1.0 + Ts_/T1)/rootT1;
+}
+
+
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
 template<class Thermo>
 inline Foam::FGMTransport<Thermo>::FGMTransport
 (
     const Thermo& t,
-    const scalar mu,
-    const scalar Pr
+    const scalar As,
+    const scalar Ts
 )
 :
     Thermo(t),
-    mu_(mu),
-    rPr_(1.0/Pr)
+    As_(As),
+    Ts_(Ts)
 {}
 
 
 template<class Thermo>
 inline Foam::FGMTransport<Thermo>::FGMTransport
 (
-    const word& name,
-    const FGMTransport& ct
+    const Thermo& t,
+    const scalar mu1, const scalar T1,
+    const scalar mu2, const scalar T2
 )
 :
-    Thermo(name, ct),
-    mu_(ct.mu_),
-    rPr_(ct.rPr_)
+    Thermo(t)
+{
+    calcCoeffs(mu1, T1, mu2, T2);
+}
+
+
+template<class Thermo>
+inline Foam::FGMTransport<Thermo>::FGMTransport
+(
+    const word& name,
+    const FGMTransport& st
+)
+:
+    Thermo(name, st),
+    As_(st.As_),
+    Ts_(st.Ts_)
 {}
 
 
@@ -100,18 +135,18 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::mu
     const scalar T
 ) const
 {
-    return mu_;
+    return As_*::sqrt(T)/(1.0 + Ts_/T);
 }
 
 
 template<class Thermo>
 inline Foam::scalar Foam::FGMTransport<Thermo>::kappa
 (
-    const scalar p,
-    const scalar T
+    const scalar p, const scalar T
 ) const
 {
-    return this->Cpv(p, T)*mu(p, T)*rPr_;
+    scalar Cv_ = this->Cv(p, T);
+    return mu(p, T)*Cv_*(1.32 + 1.77*this->R()/Cv_);
 }
 
 
@@ -122,22 +157,24 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::alphah
     const scalar T
 ) const
 {
-    return mu(p, T)*rPr_;
+
+    return kappa(p, T)/this->Cpv(p, T);
 }
 
 
 // * * * * * * * * * * * * * * * Member Operators  * * * * * * * * * * * * * //
 
 template<class Thermo>
-inline Foam::FGMTransport<Thermo>& Foam::FGMTransport<Thermo>::operator=
+inline Foam::FGMTransport<Thermo>&
+Foam::FGMTransport<Thermo>::operator=
 (
-    const FGMTransport<Thermo>& ct
+    const FGMTransport<Thermo>& st
 )
 {
-    Thermo::operator=(ct);
+    Thermo::operator=(st);
 
-    mu_ = ct.mu_;
-    rPr_ = ct.rPr_;
+    As_ = st.As_;
+    Ts_ = st.Ts_;
 
     return *this;
 }
@@ -156,8 +193,8 @@ inline void Foam::FGMTransport<Thermo>::operator+=
     molr1 /= this->nMoles();
     scalar molr2 = st.nMoles()/this->nMoles();
 
-    mu_ = molr1*mu_ + molr2*st.mu_;
-    rPr_ = 1.0/(molr1/rPr_ + molr2/st.rPr_);
+    As_ = molr1*As_ + molr2*st.As_;
+    Ts_ = molr1*Ts_ + molr2*st.Ts_;
 }
 
 
@@ -174,8 +211,8 @@ inline void Foam::FGMTransport<Thermo>::operator-=
     molr1 /= this->nMoles();
     scalar molr2 = st.nMoles()/this->nMoles();
 
-    mu_ = molr1*mu_ - molr2*st.mu_;
-    rPr_ = 1.0/(molr1/rPr_ - molr2/st.rPr_);
+    As_ = molr1*As_ - molr2*st.As_;
+    Ts_ = molr1*Ts_ - molr2*st.Ts_;
 }
 
 
@@ -194,23 +231,23 @@ inline void Foam::FGMTransport<Thermo>::operator*=
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator+
 (
-    const FGMTransport<Thermo>& ct1,
-    const FGMTransport<Thermo>& ct2
+    const FGMTransport<Thermo>& st1,
+    const FGMTransport<Thermo>& st2
 )
 {
     Thermo t
     (
-        static_cast<const Thermo&>(ct1) + static_cast<const Thermo&>(ct2)
+        static_cast<const Thermo&>(st1) + static_cast<const Thermo&>(st2)
     );
 
-    scalar molr1 = ct1.nMoles()/t.nMoles();
-    scalar molr2 = ct2.nMoles()/t.nMoles();
+    scalar molr1 = st1.nMoles()/t.nMoles();
+    scalar molr2 = st2.nMoles()/t.nMoles();
 
     return FGMTransport<Thermo>
     (
         t,
-        molr1*ct1.mu_ + molr2*ct2.mu_,
-        1.0/(molr1/ct1.rPr_ + molr2/ct2.rPr_)
+        molr1*st1.As_ + molr2*st2.As_,
+        molr1*st1.Ts_ + molr2*st2.Ts_
     );
 }
 
@@ -218,23 +255,23 @@ inline Foam::FGMTransport<Thermo> Foam::operator+
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator-
 (
-    const FGMTransport<Thermo>& ct1,
-    const FGMTransport<Thermo>& ct2
+    const FGMTransport<Thermo>& st1,
+    const FGMTransport<Thermo>& st2
 )
 {
     Thermo t
     (
-        static_cast<const Thermo&>(ct1) - static_cast<const Thermo&>(ct2)
+        static_cast<const Thermo&>(st1) - static_cast<const Thermo&>(st2)
     );
 
-    scalar molr1 = ct1.nMoles()/t.nMoles();
-    scalar molr2 = ct2.nMoles()/t.nMoles();
+    scalar molr1 = st1.nMoles()/t.nMoles();
+    scalar molr2 = st2.nMoles()/t.nMoles();
 
     return FGMTransport<Thermo>
     (
         t,
-        molr1*ct1.mu_ - molr2*ct2.mu_,
-        1.0/(molr1/ct1.rPr_ - molr2/ct2.rPr_)
+        molr1*st1.As_ - molr2*st2.As_,
+        molr1*st1.Ts_ - molr2*st2.Ts_
     );
 }
 
@@ -243,14 +280,14 @@ template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator*
 (
     const scalar s,
-    const FGMTransport<Thermo>& ct
+    const FGMTransport<Thermo>& st
 )
 {
     return FGMTransport<Thermo>
     (
-        s*static_cast<const Thermo&>(ct),
-        ct.mu_,
-        1.0/ct.rPr_
+        s*static_cast<const Thermo&>(st),
+        st.As_,
+        st.Ts_
     );
 }
 
@@ -258,11 +295,11 @@ inline Foam::FGMTransport<Thermo> Foam::operator*
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator==
 (
-    const FGMTransport<Thermo>& ct1,
-    const FGMTransport<Thermo>& ct2
+    const FGMTransport<Thermo>& st1,
+    const FGMTransport<Thermo>& st2
 )
 {
-    return ct2 - ct1;
+    return st2 - st1;
 }
 
 

@@ -74,34 +74,8 @@ makeReactionThermo
     rhoThermo,
     rhoReactionThermo,
     heRhoThermo,
-    homogeneousMixture,
-    FGMTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    perfectGas,
-    specie
-);
-
-makeReactionThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
     inhomogeneousMixture,
     constTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    perfectGas,
-    specie
-);
-
-makeReactionThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
-    inhomogeneousMixture,
-    FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -126,10 +100,10 @@ makeReactionThermo
     rhoThermo,
     rhoReactionThermo,
     heRhoThermo,
-    veryInhomogeneousMixture,
-    FGMTransport,
+    homogeneousMixture,
+    sutherlandTransport,
     sensibleEnthalpy,
-    hConstThermo,
+    janafThermo,
     perfectGas,
     specie
 );
@@ -140,7 +114,7 @@ makeReactionThermo
     rhoReactionThermo,
     heRhoThermo,
     homogeneousMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     perfectGas,
@@ -165,8 +139,34 @@ makeReactionThermo
     rhoThermo,
     rhoReactionThermo,
     heRhoThermo,
+    inhomogeneousMixture,
+    FGMTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    rhoThermo,
+    rhoReactionThermo,
+    heRhoThermo,
     veryInhomogeneousMixture,
     sutherlandTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    rhoThermo,
+    rhoReactionThermo,
+    heRhoThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     perfectGas,
@@ -192,34 +192,8 @@ makeReactionThermo
     rhoThermo,
     rhoReactionThermo,
     heRhoThermo,
-    homogeneousMixture,
-    FGMTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    incompressiblePerfectGas,
-    specie
-);
-
-makeReactionThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
     inhomogeneousMixture,
     constTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    incompressiblePerfectGas,
-    specie
-);
-
-makeReactionThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
-    inhomogeneousMixture,
-    FGMTransport,
     sensibleEnthalpy,
     hConstThermo,
     incompressiblePerfectGas,
@@ -244,10 +218,10 @@ makeReactionThermo
     rhoThermo,
     rhoReactionThermo,
     heRhoThermo,
-    veryInhomogeneousMixture,
-    FGMTransport,
+    homogeneousMixture,
+    sutherlandTransport,
     sensibleEnthalpy,
-    hConstThermo,
+    janafThermo,
     incompressiblePerfectGas,
     specie
 );
@@ -258,7 +232,7 @@ makeReactionThermo
     rhoReactionThermo,
     heRhoThermo,
     homogeneousMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     incompressiblePerfectGas,
@@ -283,8 +257,34 @@ makeReactionThermo
     rhoThermo,
     rhoReactionThermo,
     heRhoThermo,
+    inhomogeneousMixture,
+    FGMTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    incompressiblePerfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    rhoThermo,
+    rhoReactionThermo,
+    heRhoThermo,
     veryInhomogeneousMixture,
     sutherlandTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    incompressiblePerfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    rhoThermo,
+    rhoReactionThermo,
+    heRhoThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     incompressiblePerfectGas,
@@ -309,15 +309,6 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     multiComponentMixture,
-    FGMGasEThermoPhysics
-);
-
-makeReactionMixtureThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
-    multiComponentMixture,
     gasEThermoPhysics
 );
 
@@ -327,7 +318,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     multiComponentMixture,
-    constIncompressibleGasEThermoPhysics
+    FGMgasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -336,7 +327,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     multiComponentMixture,
-    FGMIncompressibleGasEThermoPhysics
+    constIncompressibleGasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -375,15 +366,6 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     reactingMixture,
-    FGMGasEThermoPhysics
-);
-
-makeReactionMixtureThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
-    reactingMixture,
     gasEThermoPhysics
 );
 
@@ -393,7 +375,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     reactingMixture,
-    constIncompressibleGasEThermoPhysics
+    FGMgasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -402,7 +384,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     reactingMixture,
-    FGMIncompressibleGasEThermoPhysics
+    constIncompressibleGasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -432,6 +414,15 @@ makeReactionMixtureThermo
     gasEThermoPhysics
 );
 
+makeReactionMixtureThermo
+(
+    rhoThermo,
+    rhoReactionThermo,
+    heRhoThermo,
+    singleStepReactingMixture,
+    FGMgasEThermoPhysics
+);
+
 
 
 
@@ -452,15 +443,6 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     multiComponentMixture,
-    FGMGasHThermoPhysics
-);
-
-makeReactionMixtureThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
-    multiComponentMixture,
     gasHThermoPhysics
 );
 
@@ -470,7 +452,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     multiComponentMixture,
-    constIncompressibleGasHThermoPhysics
+    FGMgasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -479,7 +461,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     multiComponentMixture,
-    FGMIncompressibleGasHThermoPhysics
+    constIncompressibleGasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -518,15 +500,6 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     reactingMixture,
-    FGMGasHThermoPhysics
-);
-
-makeReactionMixtureThermo
-(
-    rhoThermo,
-    rhoReactionThermo,
-    heRhoThermo,
-    reactingMixture,
     gasHThermoPhysics
 );
 
@@ -536,7 +509,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     reactingMixture,
-    constIncompressibleGasHThermoPhysics
+    FGMgasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -545,7 +518,7 @@ makeReactionMixtureThermo
     rhoReactionThermo,
     heRhoThermo,
     reactingMixture,
-    FGMIncompressibleGasHThermoPhysics
+    constIncompressibleGasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -573,6 +546,15 @@ makeReactionMixtureThermo
     heRhoThermo,
     singleStepReactingMixture,
     gasHThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    rhoThermo,
+    rhoReactionThermo,
+    heRhoThermo,
+    singleStepReactingMixture,
+    FGMgasHThermoPhysics
 );
 
 

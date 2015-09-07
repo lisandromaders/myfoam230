@@ -49,15 +49,15 @@ namespace combustionModels
     (
         diffusion,
         psiThermoCombustion,
-        constGasHThermoPhysics,
+        FGMgasHThermoPhysics,
         psiCombustionModel
     );
-//FGM implementation
+
     makeCombustionTypesThermo
     (
         diffusion,
         psiThermoCombustion,
-        FGMGasHThermoPhysics,
+        constGasHThermoPhysics,
         psiCombustionModel
     );
 
@@ -73,15 +73,15 @@ namespace combustionModels
     (
         diffusion,
         rhoThermoCombustion,
-        constGasHThermoPhysics,
+        FGMgasHThermoPhysics,
         rhoCombustionModel
     );
-//FGM implementation
+
     makeCombustionTypesThermo
     (
         diffusion,
         rhoThermoCombustion,
-        FGMGasHThermoPhysics,
+        constGasHThermoPhysics,
         rhoCombustionModel
     );
 
@@ -99,6 +99,14 @@ namespace combustionModels
     (
         diffusion,
         psiThermoCombustion,
+        FGMgasEThermoPhysics,
+        psiCombustionModel
+    );
+
+    makeCombustionTypesThermo
+    (
+        diffusion,
+        psiThermoCombustion,
         constGasEThermoPhysics,
         psiCombustionModel
     );
@@ -108,6 +116,14 @@ namespace combustionModels
         diffusion,
         rhoThermoCombustion,
         gasEThermoPhysics,
+        rhoCombustionModel
+    );
+
+    makeCombustionTypesThermo
+    (
+        diffusion,
+        rhoThermoCombustion,
+        FGMgasEThermoPhysics,
         rhoCombustionModel
     );
 

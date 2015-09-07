@@ -54,7 +54,7 @@ namespace Foam
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-// constTransport(or FGMTrasport), hConstThermo
+// constTransport, hConstThermo
 
 makeReactionThermo
 (
@@ -63,6 +63,48 @@ makeReactionThermo
     hePsiThermo,
     homogeneousMixture,
     constTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    inhomogeneousMixture,
+    constTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    veryInhomogeneousMixture,
+    constTransport,
+    sensibleEnthalpy,
+    hConstThermo,
+    perfectGas,
+    specie
+);
+
+
+// sutherlandTransport(and FGMTransport), hConstThermo
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    homogeneousMixture,
+    sutherlandTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -88,7 +130,7 @@ makeReactionThermo
     psiReactionThermo,
     hePsiThermo,
     inhomogeneousMixture,
-    constTransport,
+    sutherlandTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -114,7 +156,7 @@ makeReactionThermo
     psiReactionThermo,
     hePsiThermo,
     veryInhomogeneousMixture,
-    constTransport,
+    sutherlandTransport,
     sensibleEnthalpy,
     hConstThermo,
     perfectGas,
@@ -135,7 +177,7 @@ makeReactionThermo
 );
 
 
-// sutherlandTransport, hConstThermo
+// sutherlandTransport(or FGMTransport), janafThermo
 
 makeReactionThermo
 (
@@ -145,39 +187,10 @@ makeReactionThermo
     homogeneousMixture,
     sutherlandTransport,
     sensibleEnthalpy,
-    hConstThermo,
+    janafThermo,
     perfectGas,
     specie
 );
-
-makeReactionThermo
-(
-    psiThermo,
-    psiReactionThermo,
-    hePsiThermo,
-    inhomogeneousMixture,
-    sutherlandTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    perfectGas,
-    specie
-);
-
-makeReactionThermo
-(
-    psiThermo,
-    psiReactionThermo,
-    hePsiThermo,
-    veryInhomogeneousMixture,
-    sutherlandTransport,
-    sensibleEnthalpy,
-    hConstThermo,
-    perfectGas,
-    specie
-);
-
-
-// sutherlandTransport, janafThermo
 
 makeReactionThermo
 (
@@ -185,7 +198,7 @@ makeReactionThermo
     psiReactionThermo,
     hePsiThermo,
     homogeneousMixture,
-    sutherlandTransport,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     perfectGas,
@@ -210,8 +223,34 @@ makeReactionThermo
     psiThermo,
     psiReactionThermo,
     hePsiThermo,
+    inhomogeneousMixture,
+    FGMTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
     veryInhomogeneousMixture,
     sutherlandTransport,
+    sensibleEnthalpy,
+    janafThermo,
+    perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
     sensibleEnthalpy,
     janafThermo,
     perfectGas,
@@ -236,7 +275,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     multiComponentMixture,
-    FGMGasHThermoPhysics
+    gasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -245,7 +284,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     multiComponentMixture,
-    gasHThermoPhysics
+    FGMgasHThermoPhysics
 );
 
 
@@ -266,7 +305,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     multiComponentMixture,
-    FGMGasEThermoPhysics
+    gasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -275,7 +314,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     multiComponentMixture,
-    gasEThermoPhysics
+    FGMgasEThermoPhysics
 );
 
 
@@ -296,7 +335,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     reactingMixture,
-    FGMGasHThermoPhysics
+    gasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -305,7 +344,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     reactingMixture,
-    gasHThermoPhysics
+    FGMgasHThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -315,6 +354,15 @@ makeReactionMixtureThermo
     hePsiThermo,
     singleStepReactingMixture,
     gasHThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    singleStepReactingMixture,
+    FGMgasHThermoPhysics
 );
 
 
@@ -335,7 +383,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     reactingMixture,
-    FGMGasEThermoPhysics
+    gasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -344,7 +392,7 @@ makeReactionMixtureThermo
     psiReactionThermo,
     hePsiThermo,
     reactingMixture,
-    gasEThermoPhysics
+    FGMgasEThermoPhysics
 );
 
 makeReactionMixtureThermo
@@ -354,6 +402,15 @@ makeReactionMixtureThermo
     hePsiThermo,
     singleStepReactingMixture,
     gasEThermoPhysics
+);
+
+makeReactionMixtureThermo
+(
+    psiThermo,
+    psiReactionThermo,
+    hePsiThermo,
+    singleStepReactingMixture,
+    FGMgasEThermoPhysics
 );
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //

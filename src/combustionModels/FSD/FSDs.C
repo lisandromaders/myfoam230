@@ -51,15 +51,15 @@ namespace combustionModels
     (
         FSD,
         psiThermoCombustion,
-        constGasHThermoPhysics,
+        FGMgasHThermoPhysics,
         psiCombustionModel
     );
-//FGM implementation
+
     makeCombustionTypesThermo
     (
         FSD,
         psiThermoCombustion,
-        FGMGasHThermoPhysics,
+        constGasHThermoPhysics,
         psiCombustionModel
     );
 
@@ -75,15 +75,15 @@ namespace combustionModels
     (
         FSD,
         rhoThermoCombustion,
-        constGasHThermoPhysics,
+        FGMgasHThermoPhysics,
         rhoCombustionModel
     );
-//FGM implementation
+
     makeCombustionTypesThermo
     (
         FSD,
         rhoThermoCombustion,
-        FGMGasHThermoPhysics,
+        constGasHThermoPhysics,
         rhoCombustionModel
     );
 
@@ -100,6 +100,14 @@ namespace combustionModels
     (
         FSD,
         psiThermoCombustion,
+        FGMgasEThermoPhysics,
+        psiCombustionModel
+    );
+
+    makeCombustionTypesThermo
+    (
+        FSD,
+        psiThermoCombustion,
         constGasEThermoPhysics,
         psiCombustionModel
     );
@@ -109,6 +117,14 @@ namespace combustionModels
         FSD,
         rhoThermoCombustion,
         gasEThermoPhysics,
+        rhoCombustionModel
+    );
+
+    makeCombustionTypesThermo
+    (
+        FSD,
+        rhoThermoCombustion,
+        FGMgasEThermoPhysics,
         rhoCombustionModel
     );
 

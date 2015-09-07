@@ -42,8 +42,8 @@ Description
 #include "sensibleInternalEnergy.H"
 #include "thermo.H"
 #include "sutherlandTransport.H"
-#include "constTransport.H"
 #include "FGMTransport.H"
+#include "constTransport.H"
 
 #include "icoPolynomial.H"
 #include "hPolynomialThermo.H"
@@ -69,19 +69,6 @@ namespace Foam
     > constGasHThermoPhysics;
 
     typedef
-    FGMTransport
-    <
-        species::thermo
-        <
-            hConstThermo
-            <
-                perfectGas<specie>
-            >,
-            sensibleEnthalpy
-        >
-    > FGMGasHThermoPhysics;
-
-    typedef
     sutherlandTransport
     <
         species::thermo
@@ -93,6 +80,19 @@ namespace Foam
             sensibleEnthalpy
         >
     > gasHThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            janafThermo
+            <
+                perfectGas<specie>
+            >,
+            sensibleEnthalpy
+        >
+    > FGMgasHThermoPhysics;
 
     typedef
     constTransport
@@ -108,19 +108,6 @@ namespace Foam
     > constIncompressibleGasHThermoPhysics;
 
     typedef
-    FGMTransport
-    <
-        species::thermo
-        <
-            hConstThermo
-            <
-                incompressiblePerfectGas<specie>
-            >,
-            sensibleEnthalpy
-        >
-    > FGMIncompressibleGasHThermoPhysics;
-
-    typedef
     sutherlandTransport
     <
         species::thermo
@@ -132,6 +119,19 @@ namespace Foam
             sensibleEnthalpy
         >
     > incompressibleGasHThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            janafThermo
+            <
+                incompressiblePerfectGas<specie>
+            >,
+            sensibleEnthalpy
+        >
+    > FGMincompressibleGasHThermoPhysics;
 
     typedef
     polynomialTransport
@@ -164,19 +164,6 @@ namespace Foam
     > constGasEThermoPhysics;
 
     typedef
-    FGMTransport
-    <
-        species::thermo
-        <
-            hConstThermo
-            <
-                perfectGas<specie>
-            >,
-            sensibleInternalEnergy
-        >
-    > FGMGasEThermoPhysics;
-
-    typedef
     sutherlandTransport
     <
         species::thermo
@@ -188,6 +175,19 @@ namespace Foam
             sensibleInternalEnergy
         >
     > gasEThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            janafThermo
+            <
+                perfectGas<specie>
+            >,
+            sensibleInternalEnergy
+        >
+    > FGMgasEThermoPhysics;
 
     typedef
     constTransport
@@ -203,19 +203,6 @@ namespace Foam
     > constIncompressibleGasEThermoPhysics;
 
     typedef
-    FGMTransport
-    <
-        species::thermo
-        <
-            hConstThermo
-            <
-                incompressiblePerfectGas<specie>
-            >,
-            sensibleInternalEnergy
-        >
-    > FGMIncompressibleGasEThermoPhysics;
-
-    typedef
     sutherlandTransport
     <
         species::thermo
@@ -227,6 +214,19 @@ namespace Foam
             sensibleInternalEnergy
         >
     > incompressibleGasEThermoPhysics;
+
+    typedef
+    FGMTransport
+    <
+        species::thermo
+        <
+            janafThermo
+            <
+                incompressiblePerfectGas<specie>
+            >,
+            sensibleInternalEnergy
+        >
+    > FGMincompressibleGasEThermoPhysics;
 
     typedef
     polynomialTransport

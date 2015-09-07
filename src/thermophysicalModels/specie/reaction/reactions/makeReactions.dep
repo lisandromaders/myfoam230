@@ -144,12 +144,12 @@ reaction/reactions/makeReactions.dep: lnInclude/thermo.C
 reaction/reactions/makeReactions.dep: lnInclude/sutherlandTransport.H
 reaction/reactions/makeReactions.dep: lnInclude/sutherlandTransportI.H
 reaction/reactions/makeReactions.dep: lnInclude/sutherlandTransport.C
-reaction/reactions/makeReactions.dep: lnInclude/constTransport.H
-reaction/reactions/makeReactions.dep: lnInclude/constTransportI.H
-reaction/reactions/makeReactions.dep: lnInclude/constTransport.C
 reaction/reactions/makeReactions.dep: lnInclude/FGMTransport.H
 reaction/reactions/makeReactions.dep: lnInclude/FGMTransportI.H
 reaction/reactions/makeReactions.dep: lnInclude/FGMTransport.C
+reaction/reactions/makeReactions.dep: lnInclude/constTransport.H
+reaction/reactions/makeReactions.dep: lnInclude/constTransportI.H
+reaction/reactions/makeReactions.dep: lnInclude/constTransport.C
 reaction/reactions/makeReactions.dep: lnInclude/icoPolynomial.H
 reaction/reactions/makeReactions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Polynomial.H
 reaction/reactions/makeReactions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/VectorSpace.H
