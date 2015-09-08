@@ -99,3 +99,19 @@ volScalarField dQ
     mesh,
     dimensionedScalar("dQ", dimEnergy/dimTime, 0.0)
 );
+
+//output of properties - viscosity, conductivity, etc..
+
+volScalarField mu_output
+(
+    IOobject
+    (
+        "mu_output",
+        runTime.timeName(),
+        mesh,
+        IOobject::NO_READ,
+        IOobject::AUTO_WRITE
+    ),
+//    mesh,
+    turbulence->mu()
+);

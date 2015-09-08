@@ -131,7 +131,7 @@ psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/
 psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 psiCombustionModel/psiCombustionModel/psiCombustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H

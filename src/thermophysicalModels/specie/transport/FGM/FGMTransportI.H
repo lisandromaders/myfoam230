@@ -135,7 +135,8 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::mu
     const scalar T
 ) const
 {
-    return As_*::sqrt(T)/(1.0 + Ts_/T);
+    return 0.1;
+//    return As_*::sqrt(T)/(1.0 + Ts_/T);
 }
 
 

@@ -474,7 +474,7 @@ FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: $(WM_PROJECT_DIR)/src
 FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: lnInclude/combustionModel.H
-FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMatricesFwd.H
 FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
 FSD/reactionRateFlameAreaModels/relaxation/relaxation.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H

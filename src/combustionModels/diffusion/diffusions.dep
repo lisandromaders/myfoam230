@@ -182,7 +182,7 @@ diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+diffusion/diffusions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 diffusion/diffusions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H

@@ -134,7 +134,7 @@ laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.H
 laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-laminar/laminars.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+laminar/laminars.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 laminar/laminars.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H

@@ -133,7 +133,7 @@ noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEn
 noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+noCombustion/noCombustions.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 noCombustion/noCombustions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H

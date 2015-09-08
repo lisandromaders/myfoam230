@@ -132,7 +132,7 @@ rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJE
 rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 rhoCombustionModel/rhoChemistryCombustion/rhoChemistryCombustion.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H

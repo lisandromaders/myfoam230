@@ -2,7 +2,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "options"
-EXE_INC = -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/basic/lnInclude -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/specie/lnInclude -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/reactionThermo/lnInclude -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/chemistryModel/lnInclude -I$(LIB_SRC)/turbulenceModels/compressible/turbulenceModel -I$(LIB_SRC)/turbulenceModels/ -I$(LIB_SRC)/turbulenceModels/LES/LESdeltas/lnInclude -I$(LIB_SRC)/turbulenceModels/LES/LESfilters/lnInclude -I$(LIB_SRC)/turbulenceModels/compressible/LES/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude
+EXE_INC = -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/basic/lnInclude -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/specie/lnInclude -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/reactionThermo/lnInclude -I$(WM_PROJECT_USER_DIR)/src/thermophysicalModels/chemistryModel/lnInclude -I$(WM_PROJECT_USER_DIR)/src/turbulenceModels/compressible/turbulenceModel -I$(LIB_SRC)/turbulenceModels/ -I$(LIB_SRC)/turbulenceModels/LES/LESdeltas/lnInclude -I$(LIB_SRC)/turbulenceModels/LES/LESfilters/lnInclude -I$(LIB_SRC)/turbulenceModels/compressible/LES/lnInclude -I$(LIB_SRC)/finiteVolume/lnInclude
 # 12 "options"
 
 LIB_LIBS = -L$(FOAM_USER_LIBBIN) -lfiniteVolume -lcompressibleLESModels -lchemistryModel

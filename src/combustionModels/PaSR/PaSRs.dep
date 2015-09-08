@@ -134,7 +134,7 @@ PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.H
 PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+PaSR/PaSRs.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 PaSR/PaSRs.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H
