@@ -128,6 +128,8 @@ Foam::FGMTransport<Thermo>::New
 
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
+//Pay attention to the fact I am working with the mu viscosity instead of nu viscosity.. Compressible (mu) x Incompressible(nu)
+
 template<class Thermo>
 inline Foam::scalar Foam::FGMTransport<Thermo>::mu
 (
@@ -141,6 +143,7 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::mu
     //return As_*::sqrt(T)/(1.0 + Ts_/T);
 }
 
+// kappa is the thermal conductivity. Units: W/(mK)
 
 template<class Thermo>
 inline Foam::scalar Foam::FGMTransport<Thermo>::kappa
@@ -152,6 +155,7 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::kappa
     return mu(p, T)*Cv_*(1.32 + 1.77*this->R()/Cv_);
 }
 
+// alphah is the thermal diffusivity. Units: m^2/s
 
 template<class Thermo>
 inline Foam::scalar Foam::FGMTransport<Thermo>::alphah

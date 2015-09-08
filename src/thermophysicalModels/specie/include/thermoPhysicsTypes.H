@@ -34,9 +34,11 @@ Description
 
 #include "specie.H"
 #include "perfectGas.H"
+#include "rhoFGM.H"
 #include "incompressiblePerfectGas.H"
 #include "hConstThermo.H"
 #include "janafThermo.H"
+#include "hFGMThermo.H"
 
 #include "sensibleEnthalpy.H"
 #include "sensibleInternalEnergy.H"
@@ -86,13 +88,26 @@ namespace Foam
     <
         species::thermo
         <
-            janafThermo
+            hFGMThermo
             <
-                perfectGas<specie>
+                rhoFGM<specie>
             >,
             sensibleEnthalpy
         >
     > FGMgasHThermoPhysics;
+
+//   typedef
+//   FGMTransport
+//   <
+//       species::thermo
+//       <
+//           janafThermo
+//           <
+//               perfectGas<specie>
+//           >,
+//           sensibleEnthalpy
+//       >
+//   > FGMgasHThermoPhysics;
 
     typedef
     constTransport

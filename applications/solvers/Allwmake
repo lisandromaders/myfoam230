@@ -1,0 +1,4 @@
+cd combustion/tccFoam
+
+wclean
+wmake
