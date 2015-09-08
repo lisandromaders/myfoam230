@@ -72,10 +72,10 @@ template<class Thermo>
 Foam::Ostream& Foam::operator<<
 (
     Ostream& os,
-    const FGMTransport<Thermo>& st
+    const FGMTransport<Thermo>& ft
 )
 {
-    os << static_cast<const Thermo&>(st) << tab << st.As_ << tab << st.Ts_;
+    os << static_cast<const Thermo&>(ft) << tab << ft.As_ << tab << ft.Ts_;
 
     os.check
     (

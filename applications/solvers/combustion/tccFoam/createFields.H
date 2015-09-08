@@ -113,5 +113,5 @@ volScalarField mu_output
         IOobject::AUTO_WRITE
     ),
 //    mesh,
-    turbulence->muEff()
+    turbulence->mu()
 );

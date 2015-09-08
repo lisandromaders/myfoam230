@@ -78,12 +78,12 @@ template<class Thermo>
 inline Foam::FGMTransport<Thermo>::FGMTransport
 (
     const word& name,
-    const FGMTransport& st
+    const FGMTransport& ft
 )
 :
-    Thermo(name, st),
-    As_(st.As_),
-    Ts_(st.Ts_)
+    Thermo(name, ft),
+    As_(ft.As_),
+    Ts_(ft.Ts_)
 {}
 
 
@@ -136,7 +136,7 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::mu
 ) const
 {
     scalar mu_tcc;
-    mu_tcc = 4.00e-03;
+    mu_tcc = 4.00e-05;
     return mu_tcc;
     //return As_*::sqrt(T)/(1.0 + Ts_/T);
 }
@@ -171,13 +171,13 @@ template<class Thermo>
 inline Foam::FGMTransport<Thermo>&
 Foam::FGMTransport<Thermo>::operator=
 (
-    const FGMTransport<Thermo>& st
+    const FGMTransport<Thermo>& ft
 )
 {
-    Thermo::operator=(st);
+    Thermo::operator=(ft);
 
-    As_ = st.As_;
-    Ts_ = st.Ts_;
+    As_ = ft.As_;
+    Ts_ = ft.Ts_;
 
     return *this;
 }
@@ -186,46 +186,46 @@ Foam::FGMTransport<Thermo>::operator=
 template<class Thermo>
 inline void Foam::FGMTransport<Thermo>::operator+=
 (
-    const FGMTransport<Thermo>& st
+    const FGMTransport<Thermo>& ft
 )
 {
     scalar molr1 = this->nMoles();
 
-    Thermo::operator+=(st);
+    Thermo::operator+=(ft);
 
     molr1 /= this->nMoles();
-    scalar molr2 = st.nMoles()/this->nMoles();
+    scalar molr2 = ft.nMoles()/this->nMoles();
 
-    As_ = molr1*As_ + molr2*st.As_;
-    Ts_ = molr1*Ts_ + molr2*st.Ts_;
+    As_ = molr1*As_ + molr2*ft.As_;
+    Ts_ = molr1*Ts_ + molr2*ft.Ts_;
 }
 
 
 template<class Thermo>
 inline void Foam::FGMTransport<Thermo>::operator-=
 (
-    const FGMTransport<Thermo>& st
+    const FGMTransport<Thermo>& ft
 )
 {
     scalar molr1 = this->nMoles();
 
-    Thermo::operator-=(st);
+    Thermo::operator-=(ft);
 
     molr1 /= this->nMoles();
-    scalar molr2 = st.nMoles()/this->nMoles();
+    scalar molr2 = ft.nMoles()/this->nMoles();
 
-    As_ = molr1*As_ - molr2*st.As_;
-    Ts_ = molr1*Ts_ - molr2*st.Ts_;
+    As_ = molr1*As_ - molr2*ft.As_;
+    Ts_ = molr1*Ts_ - molr2*ft.Ts_;
 }
 
 
 template<class Thermo>
 inline void Foam::FGMTransport<Thermo>::operator*=
 (
-    const scalar s
+    const scalar f
 )
 {
-    Thermo::operator*=(s);
+    Thermo::operator*=(f);
 }
 
 
@@ -234,23 +234,23 @@ inline void Foam::FGMTransport<Thermo>::operator*=
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator+
 (
-    const FGMTransport<Thermo>& st1,
-    const FGMTransport<Thermo>& st2
+    const FGMTransport<Thermo>& ft1,
+    const FGMTransport<Thermo>& ft2
 )
 {
     Thermo t
     (
-        static_cast<const Thermo&>(st1) + static_cast<const Thermo&>(st2)
+        static_cast<const Thermo&>(ft1) + static_cast<const Thermo&>(ft2)
     );
 
-    scalar molr1 = st1.nMoles()/t.nMoles();
-    scalar molr2 = st2.nMoles()/t.nMoles();
+    scalar molr1 = ft1.nMoles()/t.nMoles();
+    scalar molr2 = ft2.nMoles()/t.nMoles();
 
     return FGMTransport<Thermo>
     (
         t,
-        molr1*st1.As_ + molr2*st2.As_,
-        molr1*st1.Ts_ + molr2*st2.Ts_
+        molr1*ft1.As_ + molr2*ft2.As_,
+        molr1*ft1.Ts_ + molr2*ft2.Ts_
     );
 }
 
@@ -258,23 +258,23 @@ inline Foam::FGMTransport<Thermo> Foam::operator+
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator-
 (
-    const FGMTransport<Thermo>& st1,
-    const FGMTransport<Thermo>& st2
+    const FGMTransport<Thermo>& ft1,
+    const FGMTransport<Thermo>& ft2
 )
 {
     Thermo t
     (
-        static_cast<const Thermo&>(st1) - static_cast<const Thermo&>(st2)
+        static_cast<const Thermo&>(ft1) - static_cast<const Thermo&>(ft2)
     );
 
-    scalar molr1 = st1.nMoles()/t.nMoles();
-    scalar molr2 = st2.nMoles()/t.nMoles();
+    scalar molr1 = ft1.nMoles()/t.nMoles();
+    scalar molr2 = ft2.nMoles()/t.nMoles();
 
     return FGMTransport<Thermo>
     (
         t,
-        molr1*st1.As_ - molr2*st2.As_,
-        molr1*st1.Ts_ - molr2*st2.Ts_
+        molr1*ft1.As_ - molr2*ft2.As_,
+        molr1*ft1.Ts_ - molr2*ft2.Ts_
     );
 }
 
@@ -282,15 +282,15 @@ inline Foam::FGMTransport<Thermo> Foam::operator-
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator*
 (
-    const scalar s,
-    const FGMTransport<Thermo>& st
+    const scalar f,
+    const FGMTransport<Thermo>& ft
 )
 {
     return FGMTransport<Thermo>
     (
-        s*static_cast<const Thermo&>(st),
-        st.As_,
-        st.Ts_
+        f*static_cast<const Thermo&>(ft),
+        ft.As_,
+        ft.Ts_
     );
 }
 
@@ -298,11 +298,11 @@ inline Foam::FGMTransport<Thermo> Foam::operator*
 template<class Thermo>
 inline Foam::FGMTransport<Thermo> Foam::operator==
 (
-    const FGMTransport<Thermo>& st1,
-    const FGMTransport<Thermo>& st2
+    const FGMTransport<Thermo>& ft1,
+    const FGMTransport<Thermo>& ft2
 )
 {
-    return st2 - st1;
+    return ft2 - ft1;
 }
 
 
