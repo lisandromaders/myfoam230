@@ -1,0 +1,29 @@
+cd thermophysicalModels/specie
+
+wclean lib
+wmake libso
+
+cd ../basic
+
+wclean lib
+wmake libso
+
+cd ../reactionThermo
+
+wclean lib
+wmake libso
+
+cd ../chemistryModel
+
+wclean lib
+wmake libso
+
+cd ../../combustionModels
+
+wclean lib
+wmake libso
+
+cd ../turbulenceModels/compressible/turbulenceModel/
+
+wclean lib
+wmake libso

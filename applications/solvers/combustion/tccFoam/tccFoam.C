@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 
         runTime.write();
 
-	mu_output = turbulence->mu();
+        mu_output = turbulence->muEff();
 	
         Info<< "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
             << "  ClockTime = " << runTime.elapsedClockTime() << " s"

@@ -135,10 +135,7 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::mu
     const scalar T
 ) const
 {
-    scalar mu_tcc;
-    mu_tcc = 4.00e-03;
-    return mu_tcc;
-    //return As_*::sqrt(T)/(1.0 + Ts_/T);
+    return As_*::sqrt(T)/(1.0 + Ts_/T);
 }
 
 
