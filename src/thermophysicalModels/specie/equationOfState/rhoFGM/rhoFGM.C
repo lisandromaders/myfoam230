@@ -56,11 +56,11 @@ void Foam::rhoFGM<Specie>::write(Ostream& os) const
 // * * * * * * * * * * * * * * * Ostream Operator  * * * * * * * * * * * * * //
 
 template<class Specie>
-Foam::Ostream& Foam::operator<<(Ostream& os, const rhoFGM<Specie>& pg)
+Foam::Ostream& Foam::operator<<(Ostream& os, const rhoFGM<Specie>& rf)
 {
-    os  << static_cast<const Specie&>(pg);
+    os  << static_cast<const Specie&>(rf);
 
-    os.check("Ostream& operator<<(Ostream& os, const rhoFGM<Specie>& st)");
+    os.check("Ostream& operator<<(Ostream& os, const rhoFGM<Specie>& ft)");
     return os;
 }
 

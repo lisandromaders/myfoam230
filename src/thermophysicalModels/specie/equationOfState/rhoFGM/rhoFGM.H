@@ -179,7 +179,7 @@ public:
 
         friend rhoFGM operator* <Specie>
         (
-            const scalar s,
+            const scalar f,
             const rhoFGM&
         );
 

@@ -115,3 +115,31 @@ volScalarField mu_output
 //    mesh,
     turbulence->mu()
 );
+
+volScalarField kappa_output
+(
+    IOobject
+    (
+        "kappa_output",
+        runTime.timeName(),
+        mesh,
+        IOobject::NO_READ,
+        IOobject::AUTO_WRITE
+    ),
+//    mesh,
+    thermo.kappa()
+);
+
+volScalarField cp_output
+(
+    IOobject
+    (
+        "cp_output",
+        runTime.timeName(),
+        mesh,
+        IOobject::NO_READ,
+        IOobject::AUTO_WRITE
+    ),
+//    mesh,
+    thermo.Cp()
+);

@@ -130,7 +130,7 @@ combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/Na
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/stringList.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/NamedEnum.C
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/regIOobjectI.H
-combustionModel/combustionModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
+combustionModel/combustionModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/turbulenceModels/compressible/turbulenceModel/turbulenceModel.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/primitiveFieldsFwd.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/fieldTypes.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/vector.H
@@ -157,8 +157,8 @@ combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tr
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFieldsFwd.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMatricesFwd.H
-combustionModel/combustionModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
-combustionModel/combustionModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+combustionModel/combustionModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
+combustionModel/combustionModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -477,7 +477,7 @@ combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclud
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-combustionModel/combustionModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+combustionModel/combustionModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 combustionModel/combustionModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nearWallDist.H
 combustionModel/combustionModel.dep: combustionModel/combustionModelI.H
 $(OBJECTS_DIR)/combustionModel.o: $(EXE_DEP)

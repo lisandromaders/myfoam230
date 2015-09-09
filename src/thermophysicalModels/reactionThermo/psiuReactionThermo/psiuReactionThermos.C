@@ -31,8 +31,10 @@ License
 
 #include "specie.H"
 #include "perfectGas.H"
+#include "rhoFGM.H"
 #include "hConstThermo.H"
 #include "janafThermo.H"
+#include "hFGMThermo.H"
 #include "thermo.H"
 #include "constTransport.H"
 #include "sutherlandTransport.H"
@@ -138,6 +140,19 @@ makeReactionThermo
     psiThermo,
     psiuReactionThermo,
     heheuPsiThermo,
+    homogeneousMixture,
+    FGMTransport,
+    absoluteEnthalpy,
+    hFGMThermo,
+    rhoFGM,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
     inhomogeneousMixture,
     sutherlandTransport,
     absoluteEnthalpy,
@@ -156,6 +171,19 @@ makeReactionThermo
     absoluteEnthalpy,
     janafThermo,
     perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
+    inhomogeneousMixture,
+    FGMTransport,
+    absoluteEnthalpy,
+    hFGMThermo,
+    rhoFGM,
     specie
 );
 
@@ -190,6 +218,19 @@ makeReactionThermo
     psiThermo,
     psiuReactionThermo,
     heheuPsiThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
+    absoluteEnthalpy,
+    hFGMThermo,
+    rhoFGM,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
     egrMixture,
     sutherlandTransport,
     absoluteEnthalpy,
@@ -208,6 +249,19 @@ makeReactionThermo
     absoluteEnthalpy,
     janafThermo,
     perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
+    egrMixture,
+    FGMTransport,
+    absoluteEnthalpy,
+    hFGMThermo,
+    rhoFGM,
     specie
 );
 
@@ -243,6 +297,19 @@ makeReactionThermo
     psiThermo,
     psiuReactionThermo,
     heheuPsiThermo,
+    homogeneousMixture,
+    FGMTransport,
+    absoluteInternalEnergy,
+    hFGMThermo,
+    rhoFGM,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
     inhomogeneousMixture,
     sutherlandTransport,
     absoluteInternalEnergy,
@@ -261,6 +328,19 @@ makeReactionThermo
     absoluteInternalEnergy,
     janafThermo,
     perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
+    inhomogeneousMixture,
+    FGMTransport,
+    absoluteInternalEnergy,
+    hFGMThermo,
+    rhoFGM,
     specie
 );
 
@@ -295,6 +375,19 @@ makeReactionThermo
     psiThermo,
     psiuReactionThermo,
     heheuPsiThermo,
+    veryInhomogeneousMixture,
+    FGMTransport,
+    absoluteInternalEnergy,
+    hFGMThermo,
+    rhoFGM,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
     egrMixture,
     sutherlandTransport,
     absoluteInternalEnergy,
@@ -313,6 +406,19 @@ makeReactionThermo
     absoluteInternalEnergy,
     janafThermo,
     perfectGas,
+    specie
+);
+
+makeReactionThermo
+(
+    psiThermo,
+    psiuReactionThermo,
+    heheuPsiThermo,
+    egrMixture,
+    FGMTransport,
+    absoluteInternalEnergy,
+    hFGMThermo,
+    rhoFGM,
     specie
 );
 

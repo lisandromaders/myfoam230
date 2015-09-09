@@ -472,7 +472,7 @@ mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: $(WM_PROJECT
 mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.H
 mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
-mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/speciesTable.H
+mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/specie/lnInclude/speciesTable.H
 mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordList.H
 mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordListI.H
 mixtures/basicMultiComponentMixture/basicMultiComponentMixture.dep: mixtures/basicMultiComponentMixture/basicMultiComponentMixtureI.H

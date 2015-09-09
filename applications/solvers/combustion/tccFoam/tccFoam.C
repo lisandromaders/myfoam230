@@ -89,6 +89,8 @@ int main(int argc, char *argv[])
         runTime.write();
 
         mu_output = turbulence->mu();
+	kappa_output = thermo.kappa();
+	cp_output = thermo.Cp();
 	
         Info<< "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
             << "  ClockTime = " << runTime.elapsedClockTime() << " s"

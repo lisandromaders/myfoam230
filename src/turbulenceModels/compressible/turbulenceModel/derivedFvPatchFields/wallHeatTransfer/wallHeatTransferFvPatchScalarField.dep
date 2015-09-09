@@ -374,8 +374,8 @@ derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/addToRunTimeSelectionTable.H
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: turbulenceModel.H
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMatricesFwd.H
-derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
-derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
+derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -481,7 +481,7 @@ derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/tensorFieldField.C
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 derivedFvPatchFields/wallHeatTransfer/wallHeatTransferFvPatchScalarField.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nearWallDist.H
 $(OBJECTS_DIR)/wallHeatTransferFvPatchScalarField.o: $(EXE_DEP)
 $(OBJECTS_DIR)/wallHeatTransferFvPatchScalarField.o:

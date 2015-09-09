@@ -28,9 +28,11 @@ License
 
 #include "specie.H"
 #include "perfectGas.H"
+#include "rhoFGM.H"
 #include "hConstThermo.H"
 #include "eConstThermo.H"
 #include "janafThermo.H"
+#include "hFGMThermo.H"
 #include "sensibleEnthalpy.H"
 #include "sensibleInternalEnergy.H"
 #include "thermo.H"
@@ -106,6 +108,18 @@ makeThermo
     sensibleEnthalpy,
     janafThermo,
     perfectGas,
+    specie
+);
+
+makeThermo
+(
+    psiThermo,
+    hePsiThermo,
+    pureMixture,
+    FGMTransport,
+    sensibleEnthalpy,
+    hFGMThermo,
+    rhoFGM,
     specie
 );
 
@@ -204,6 +218,18 @@ makeThermo
     sensibleInternalEnergy,
     janafThermo,
     perfectGas,
+    specie
+);
+
+makeThermo
+(
+    psiThermo,
+    hePsiThermo,
+    pureMixture,
+    FGMTransport,
+    sensibleInternalEnergy,
+    hFGMThermo,
+    rhoFGM,
     specie
 );
 

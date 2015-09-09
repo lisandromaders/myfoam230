@@ -40,10 +40,10 @@ template<class Specie>
 inline Foam::rhoFGM<Specie>::rhoFGM
 (
     const word& name,
-    const rhoFGM<Specie>& pg
+    const rhoFGM<Specie>& rf
 )
 :
-    Specie(name, pg)
+    Specie(name, rf)
 {}
 
 
@@ -106,23 +106,23 @@ inline Foam::scalar Foam::rhoFGM<Specie>::cpMcv(scalar, scalar) const
 // * * * * * * * * * * * * * * * Member Operators  * * * * * * * * * * * * * //
 
 template<class Specie>
-inline void Foam::rhoFGM<Specie>::operator+=(const rhoFGM<Specie>& pg)
+inline void Foam::rhoFGM<Specie>::operator+=(const rhoFGM<Specie>& rf)
 {
-    Specie::operator+=(pg);
+    Specie::operator+=(rf);
 }
 
 
 template<class Specie>
-inline void Foam::rhoFGM<Specie>::operator-=(const rhoFGM<Specie>& pg)
+inline void Foam::rhoFGM<Specie>::operator-=(const rhoFGM<Specie>& rf)
 {
-    Specie::operator-=(pg);
+    Specie::operator-=(rf);
 }
 
 
 template<class Specie>
-inline void Foam::rhoFGM<Specie>::operator*=(const scalar s)
+inline void Foam::rhoFGM<Specie>::operator*=(const scalar f)
 {
-    Specie::operator*=(s);
+    Specie::operator*=(f);
 }
 
 
@@ -131,14 +131,14 @@ inline void Foam::rhoFGM<Specie>::operator*=(const scalar s)
 template<class Specie>
 inline Foam::rhoFGM<Specie> Foam::operator+
 (
-    const rhoFGM<Specie>& pg1,
-    const rhoFGM<Specie>& pg2
+    const rhoFGM<Specie>& rf1,
+    const rhoFGM<Specie>& rf2
 )
 {
     return rhoFGM<Specie>
     (
-        static_cast<const Specie&>(pg1)
-      + static_cast<const Specie&>(pg2)
+        static_cast<const Specie&>(rf1)
+      + static_cast<const Specie&>(rf2)
     );
 }
 
@@ -146,14 +146,14 @@ inline Foam::rhoFGM<Specie> Foam::operator+
 template<class Specie>
 inline Foam::rhoFGM<Specie> Foam::operator-
 (
-    const rhoFGM<Specie>& pg1,
-    const rhoFGM<Specie>& pg2
+    const rhoFGM<Specie>& rf1,
+    const rhoFGM<Specie>& rf2
 )
 {
     return rhoFGM<Specie>
     (
-        static_cast<const Specie&>(pg1)
-      - static_cast<const Specie&>(pg2)
+        static_cast<const Specie&>(rf1)
+      - static_cast<const Specie&>(rf2)
     );
 }
 
@@ -161,22 +161,22 @@ inline Foam::rhoFGM<Specie> Foam::operator-
 template<class Specie>
 inline Foam::rhoFGM<Specie> Foam::operator*
 (
-    const scalar s,
-    const rhoFGM<Specie>& pg
+    const scalar f,
+    const rhoFGM<Specie>& rf
 )
 {
-    return rhoFGM<Specie>(s*static_cast<const Specie&>(pg));
+    return rhoFGM<Specie>(f*static_cast<const Specie&>(rf));
 }
 
 
 template<class Specie>
 inline Foam::rhoFGM<Specie> Foam::operator==
 (
-    const rhoFGM<Specie>& pg1,
-    const rhoFGM<Specie>& pg2
+    const rhoFGM<Specie>& rf1,
+    const rhoFGM<Specie>& rf2
 )
 {
-    return pg2 - pg1;
+    return rf2 - rf1;
 }
 
 

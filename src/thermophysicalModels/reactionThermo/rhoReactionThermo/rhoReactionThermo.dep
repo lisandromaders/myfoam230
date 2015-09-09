@@ -1,9 +1,9 @@
 $(OBJECTS_DIR)/rhoReactionThermo.o: rhoReactionThermo/rhoReactionThermo.dep
 rhoReactionThermo/rhoReactionThermo.dep: rhoReactionThermo/rhoReactionThermo.C
 rhoReactionThermo/rhoReactionThermo.dep: rhoReactionThermo/rhoReactionThermo.H
-rhoReactionThermo/rhoReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/rhoThermo.H
-rhoReactionThermo/rhoReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
-rhoReactionThermo/rhoReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+rhoReactionThermo/rhoReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/rhoThermo.H
+rhoReactionThermo/rhoReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
+rhoReactionThermo/rhoReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -476,9 +476,9 @@ rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnIn
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-rhoReactionThermo/rhoReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+rhoReactionThermo/rhoReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 rhoReactionThermo/rhoReactionThermo.dep: lnInclude/basicMultiComponentMixture.H
-rhoReactionThermo/rhoReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/speciesTable.H
+rhoReactionThermo/rhoReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/specie/lnInclude/speciesTable.H
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordList.H
 rhoReactionThermo/rhoReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordListI.H
 rhoReactionThermo/rhoReactionThermo.dep: lnInclude/basicMultiComponentMixtureI.H

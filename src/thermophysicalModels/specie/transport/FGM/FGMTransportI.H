@@ -151,8 +151,9 @@ inline Foam::scalar Foam::FGMTransport<Thermo>::kappa
     const scalar p, const scalar T
 ) const
 {
-    scalar Cv_ = this->Cv(p, T);
-    return mu(p, T)*Cv_*(1.32 + 1.77*this->R()/Cv_);
+    return 0.085;
+//   scalar Cv_ = this->Cv(p, T);
+//   return mu(p, T)*Cv_*(1.32 + 1.77*this->R()/Cv_);
 }
 
 // alphah is the thermal diffusivity. Units: m^2/s

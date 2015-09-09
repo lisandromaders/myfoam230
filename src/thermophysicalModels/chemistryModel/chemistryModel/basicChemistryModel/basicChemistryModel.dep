@@ -365,7 +365,7 @@ chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/sr
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvPatchFvMeshTemplates.C
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: chemistryModel/basicChemistryModel/basicChemistryModelI.H
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: chemistryModel/basicChemistryModel/basicChemistryModelTemplates.C
-chemistryModel/basicChemistryModel/basicChemistryModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+chemistryModel/basicChemistryModel/basicChemistryModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -476,7 +476,7 @@ chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/sr
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 chemistryModel/basicChemistryModel/basicChemistryModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-chemistryModel/basicChemistryModel/basicChemistryModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+chemistryModel/basicChemistryModel/basicChemistryModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 $(OBJECTS_DIR)/basicChemistryModel.o: $(EXE_DEP)
 $(OBJECTS_DIR)/basicChemistryModel.o:
 	@SOURCE_DIR=chemistryModel/basicChemistryModel

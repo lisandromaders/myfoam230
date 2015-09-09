@@ -125,8 +125,8 @@ turbulenceModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/triadI.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFieldsFwd.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMatricesFwd.H
-turbulenceModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
-turbulenceModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+turbulenceModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
+turbulenceModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -476,7 +476,7 @@ turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPa
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-turbulenceModel.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+turbulenceModel.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nearWallDist.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFields.H
 turbulenceModel.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceMesh.H

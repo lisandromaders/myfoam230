@@ -23,31 +23,31 @@ License
 
 \*---------------------------------------------------------------------------*/
 
-#include "janafThermo.H"
+#include "hFGMThermo.H"
 #include "IOstreams.H"
 
 // * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 
 template<class EquationOfState>
-void Foam::janafThermo<EquationOfState>::checkInputData() const
+void Foam::hFGMThermo<EquationOfState>::checkInputData() const
 {
     if (Tlow_ >= Thigh_)
     {
-        FatalErrorIn("janafThermo<EquationOfState>::check()")
+        FatalErrorIn("hFGMThermo<EquationOfState>::check()")
             << "Tlow(" << Tlow_ << ") >= Thigh(" << Thigh_ << ')'
             << exit(FatalError);
     }
 
     if (Tcommon_ <= Tlow_)
     {
-        FatalErrorIn("janafThermo<EquationOfState>::check()")
+        FatalErrorIn("hFGMThermo<EquationOfState>::check()")
             << "Tcommon(" << Tcommon_ << ") <= Tlow(" << Tlow_ << ')'
             << exit(FatalError);
     }
 
     if (Tcommon_ > Thigh_)
     {
-        FatalErrorIn("janafThermo<EquationOfState>::check()")
+        FatalErrorIn("hFGMThermo<EquationOfState>::check()")
             << "Tcommon(" << Tcommon_ << ") > Thigh(" << Thigh_ << ')'
             << exit(FatalError);
     }
@@ -57,7 +57,7 @@ void Foam::janafThermo<EquationOfState>::checkInputData() const
 // * * * * * * * * * * * * * * * * Constructors  * * * * * * * * * * * * * * //
 
 template<class EquationOfState>
-Foam::janafThermo<EquationOfState>::janafThermo(Istream& is)
+Foam::hFGMThermo<EquationOfState>::hFGMThermo(Istream& is)
 :
     EquationOfState(is),
     Tlow_(readScalar(is)),
@@ -77,12 +77,12 @@ Foam::janafThermo<EquationOfState>::janafThermo(Istream& is)
     }
 
     // Check state of Istream
-    is.check("janafThermo::janafThermo(Istream& is)");
+    is.check("hFGMThermo::hFGMThermo(Istream& is)");
 }
 
 
 template<class EquationOfState>
-Foam::janafThermo<EquationOfState>::janafThermo(const dictionary& dict)
+Foam::hFGMThermo<EquationOfState>::hFGMThermo(const dictionary& dict)
 :
     EquationOfState(dict),
     Tlow_(readScalar(dict.subDict("thermodynamics").lookup("Tlow"))),
@@ -98,7 +98,7 @@ Foam::janafThermo<EquationOfState>::janafThermo(const dictionary& dict)
 // * * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * //
 
 template<class EquationOfState>
-void Foam::janafThermo<EquationOfState>::write(Ostream& os) const
+void Foam::hFGMThermo<EquationOfState>::write(Ostream& os) const
 {
     EquationOfState::write(os);
 
@@ -118,33 +118,33 @@ template<class EquationOfState>
 Foam::Ostream& Foam::operator<<
 (
     Ostream& os,
-    const janafThermo<EquationOfState>& jt
+    const hFGMThermo<EquationOfState>& hft
 )
 {
-    os  << static_cast<const EquationOfState&>(jt) << nl
-        << "    " << jt.Tlow_
-        << tab << jt.Thigh_
-        << tab << jt.Tcommon_;
+    os  << static_cast<const EquationOfState&>(hft) << nl
+        << "    " << hft.Tlow_
+        << tab << hft.Thigh_
+        << tab << hft.Tcommon_;
 
     os << nl << "    ";
 
-    forAll(jt.highCpCoeffs_, i)
+    forAll(hft.highCpCoeffs_, i)
     {
-        os << jt.highCpCoeffs_[i] << ' ';
+        os << hft.highCpCoeffs_[i] << ' ';
     }
 
     os << nl << "    ";
 
-    forAll(jt.lowCpCoeffs_, i)
+    forAll(hft.lowCpCoeffs_, i)
     {
-        os << jt.lowCpCoeffs_[i] << ' ';
+        os << hft.lowCpCoeffs_[i] << ' ';
     }
 
     os << endl;
 
     os.check
     (
-        "operator<<(Ostream& os, const janafThermo<EquationOfState>& jt)"
+        "operator<<(Ostream& os, const hFGMThermo<EquationOfState>& hft)"
     );
 
     return os;

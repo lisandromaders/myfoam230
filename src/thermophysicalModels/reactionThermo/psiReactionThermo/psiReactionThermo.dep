@@ -1,9 +1,9 @@
 $(OBJECTS_DIR)/psiReactionThermo.o: psiReactionThermo/psiReactionThermo.dep
 psiReactionThermo/psiReactionThermo.dep: psiReactionThermo/psiReactionThermo.C
 psiReactionThermo/psiReactionThermo.dep: psiReactionThermo/psiReactionThermo.H
-psiReactionThermo/psiReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/psiThermo.H
-psiReactionThermo/psiReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
-psiReactionThermo/psiReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+psiReactionThermo/psiReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/psiThermo.H
+psiReactionThermo/psiReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
+psiReactionThermo/psiReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -476,9 +476,9 @@ psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnIn
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-psiReactionThermo/psiReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+psiReactionThermo/psiReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 psiReactionThermo/psiReactionThermo.dep: lnInclude/basicMultiComponentMixture.H
-psiReactionThermo/psiReactionThermo.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/specie/lnInclude/speciesTable.H
+psiReactionThermo/psiReactionThermo.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/specie/lnInclude/speciesTable.H
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordList.H
 psiReactionThermo/psiReactionThermo.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/hashedWordListI.H
 psiReactionThermo/psiReactionThermo.dep: lnInclude/basicMultiComponentMixtureI.H

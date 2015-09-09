@@ -40,10 +40,10 @@ template<class Specie>
 inline Foam::perfectGas<Specie>::perfectGas
 (
     const word& name,
-    const perfectGas<Specie>& pg
+    const perfectGas<Specie>& rf
 )
 :
-    Specie(name, pg)
+    Specie(name, rf)
 {}
 
 
@@ -106,16 +106,16 @@ inline Foam::scalar Foam::perfectGas<Specie>::cpMcv(scalar, scalar) const
 // * * * * * * * * * * * * * * * Member Operators  * * * * * * * * * * * * * //
 
 template<class Specie>
-inline void Foam::perfectGas<Specie>::operator+=(const perfectGas<Specie>& pg)
+inline void Foam::perfectGas<Specie>::operator+=(const perfectGas<Specie>& rf)
 {
-    Specie::operator+=(pg);
+    Specie::operator+=(rf);
 }
 
 
 template<class Specie>
-inline void Foam::perfectGas<Specie>::operator-=(const perfectGas<Specie>& pg)
+inline void Foam::perfectGas<Specie>::operator-=(const perfectGas<Specie>& rf)
 {
-    Specie::operator-=(pg);
+    Specie::operator-=(rf);
 }
 
 
@@ -131,14 +131,14 @@ inline void Foam::perfectGas<Specie>::operator*=(const scalar s)
 template<class Specie>
 inline Foam::perfectGas<Specie> Foam::operator+
 (
-    const perfectGas<Specie>& pg1,
-    const perfectGas<Specie>& pg2
+    const perfectGas<Specie>& rf1,
+    const perfectGas<Specie>& rf2
 )
 {
     return perfectGas<Specie>
     (
-        static_cast<const Specie&>(pg1)
-      + static_cast<const Specie&>(pg2)
+        static_cast<const Specie&>(rf1)
+      + static_cast<const Specie&>(rf2)
     );
 }
 
@@ -146,14 +146,14 @@ inline Foam::perfectGas<Specie> Foam::operator+
 template<class Specie>
 inline Foam::perfectGas<Specie> Foam::operator-
 (
-    const perfectGas<Specie>& pg1,
-    const perfectGas<Specie>& pg2
+    const perfectGas<Specie>& rf1,
+    const perfectGas<Specie>& rf2
 )
 {
     return perfectGas<Specie>
     (
-        static_cast<const Specie&>(pg1)
-      - static_cast<const Specie&>(pg2)
+        static_cast<const Specie&>(rf1)
+      - static_cast<const Specie&>(rf2)
     );
 }
 
@@ -162,21 +162,21 @@ template<class Specie>
 inline Foam::perfectGas<Specie> Foam::operator*
 (
     const scalar s,
-    const perfectGas<Specie>& pg
+    const perfectGas<Specie>& rf
 )
 {
-    return perfectGas<Specie>(s*static_cast<const Specie&>(pg));
+    return perfectGas<Specie>(s*static_cast<const Specie&>(rf));
 }
 
 
 template<class Specie>
 inline Foam::perfectGas<Specie> Foam::operator==
 (
-    const perfectGas<Specie>& pg1,
-    const perfectGas<Specie>& pg2
+    const perfectGas<Specie>& rf1,
+    const perfectGas<Specie>& rf2
 )
 {
-    return pg2 - pg1;
+    return rf2 - rf1;
 }
 
 

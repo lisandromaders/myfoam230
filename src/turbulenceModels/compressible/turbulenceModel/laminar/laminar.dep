@@ -126,8 +126,8 @@ laminar/laminar.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/triadI.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFieldsFwd.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/surfaceFieldsFwd.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvMatricesFwd.H
-laminar/laminar.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
-laminar/laminar.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
+laminar/laminar.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/fluidThermo.H
+laminar/laminar.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermo.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/volFields.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricFields.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/GeometricScalarField.H
@@ -477,7 +477,7 @@ laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPa
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchField.C
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/calculatedFvPatchFields.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/wordIOList.H
-laminar/laminar.dep: /home/garber/OpenFOAM/garber-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
+laminar/laminar.dep: /home/lisandro/OpenFOAM/lisandro-2.3.0/src/thermophysicalModels/basic/lnInclude/basicThermoTemplates.C
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/nearWallDist.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvcGrad.H
 laminar/laminar.dep: $(WM_PROJECT_DIR)/src/finiteVolume/lnInclude/fvcGrad.C

@@ -127,6 +127,9 @@ reaction/reactions/makeReactions.dep: lnInclude/perfectGasI.H
 reaction/reactions/makeReactions.dep: lnInclude/perfectGas.C
 reaction/reactions/makeReactions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/IOstreams.H
 reaction/reactions/makeReactions.dep: $(WM_PROJECT_DIR)/src/OpenFOAM/lnInclude/prefixOSstream.H
+reaction/reactions/makeReactions.dep: lnInclude/rhoFGM.H
+reaction/reactions/makeReactions.dep: lnInclude/rhoFGMI.H
+reaction/reactions/makeReactions.dep: lnInclude/rhoFGM.C
 reaction/reactions/makeReactions.dep: lnInclude/incompressiblePerfectGas.H
 reaction/reactions/makeReactions.dep: lnInclude/incompressiblePerfectGasI.H
 reaction/reactions/makeReactions.dep: lnInclude/incompressiblePerfectGas.C
@@ -136,6 +139,9 @@ reaction/reactions/makeReactions.dep: lnInclude/hConstThermo.C
 reaction/reactions/makeReactions.dep: lnInclude/janafThermo.H
 reaction/reactions/makeReactions.dep: lnInclude/janafThermoI.H
 reaction/reactions/makeReactions.dep: lnInclude/janafThermo.C
+reaction/reactions/makeReactions.dep: lnInclude/hFGMThermo.H
+reaction/reactions/makeReactions.dep: lnInclude/hFGMThermoI.H
+reaction/reactions/makeReactions.dep: lnInclude/hFGMThermo.C
 reaction/reactions/makeReactions.dep: lnInclude/sensibleEnthalpy.H
 reaction/reactions/makeReactions.dep: lnInclude/sensibleInternalEnergy.H
 reaction/reactions/makeReactions.dep: lnInclude/thermo.H

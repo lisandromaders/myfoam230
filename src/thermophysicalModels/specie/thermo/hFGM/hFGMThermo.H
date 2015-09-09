@@ -22,20 +22,20 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Class
-    Foam::janafThermo
+    Foam::hFGMThermo
 
 Description
     JANAF tables based thermodynamics package templated
     into the equation of state.
 
 SourceFiles
-    janafThermoI.H
-    janafThermo.C
+    hFGMThermoI.H
+    hFGMThermo.C
 
 \*---------------------------------------------------------------------------*/
 
-#ifndef janafThermo_H
-#define janafThermo_H
+#ifndef hFGMThermo_H
+#define hFGMThermo_H
 
 #include "scalar.H"
 #include "FixedList.H"
@@ -47,50 +47,50 @@ namespace Foam
 
 // Forward declaration of friend functions and operators
 
-template<class EquationOfState> class janafThermo;
+template<class EquationOfState> class hFGMThermo;
 
 template<class EquationOfState>
-inline janafThermo<EquationOfState> operator+
+inline hFGMThermo<EquationOfState> operator+
 (
-    const janafThermo<EquationOfState>&,
-    const janafThermo<EquationOfState>&
+    const hFGMThermo<EquationOfState>&,
+    const hFGMThermo<EquationOfState>&
 );
 
 template<class EquationOfState>
-inline janafThermo<EquationOfState> operator-
+inline hFGMThermo<EquationOfState> operator-
 (
-    const janafThermo<EquationOfState>&,
-    const janafThermo<EquationOfState>&
+    const hFGMThermo<EquationOfState>&,
+    const hFGMThermo<EquationOfState>&
 );
 
 template<class EquationOfState>
-inline janafThermo<EquationOfState> operator*
+inline hFGMThermo<EquationOfState> operator*
 (
     const scalar,
-    const janafThermo<EquationOfState>&
+    const hFGMThermo<EquationOfState>&
 );
 
 template<class EquationOfState>
-inline janafThermo<EquationOfState> operator==
+inline hFGMThermo<EquationOfState> operator==
 (
-    const janafThermo<EquationOfState>&,
-    const janafThermo<EquationOfState>&
+    const hFGMThermo<EquationOfState>&,
+    const hFGMThermo<EquationOfState>&
 );
 
 template<class EquationOfState>
 Ostream& operator<<
 (
     Ostream&,
-    const janafThermo<EquationOfState>&
+    const hFGMThermo<EquationOfState>&
 );
 
 
 /*---------------------------------------------------------------------------*\
-                           Class janafThermo Declaration
+                           Class hFGMThermo Declaration
 \*---------------------------------------------------------------------------*/
 
 template<class EquationOfState>
-class janafThermo
+class hFGMThermo
 :
     public EquationOfState
 {
@@ -128,9 +128,9 @@ public:
     // Constructors
 
         //- Construct from components
-        inline janafThermo
+        inline hFGMThermo
         (
-            const EquationOfState& st,
+            const EquationOfState& ft,
             const scalar Tlow,
             const scalar Thigh,
             const scalar Tcommon,
@@ -139,13 +139,13 @@ public:
         );
 
         //- Construct from Istream
-        janafThermo(Istream&);
+        hFGMThermo(Istream&);
 
         //- Construct from dictionary
-        janafThermo(const dictionary& dict);
+        hFGMThermo(const dictionary& dict);
 
         //- Construct as a named copy
-        inline janafThermo(const word&, const janafThermo&);
+        inline hFGMThermo(const word&, const hFGMThermo&);
 
 
     // Member Functions
@@ -153,7 +153,7 @@ public:
         //- Return the instantiated type name
         static word typeName()
         {
-            return "janaf<" + EquationOfState::typeName() + '>';
+            return "hFGM<" + EquationOfState::typeName() + '>';
         }
 
         //- Limit the temperature to be in the range Tlow_ to Thigh_
@@ -204,34 +204,34 @@ public:
 
     // Member operators
 
-        inline void operator+=(const janafThermo&);
-        inline void operator-=(const janafThermo&);
+        inline void operator+=(const hFGMThermo&);
+        inline void operator-=(const hFGMThermo&);
 
 
     // Friend operators
 
-        friend janafThermo operator+ <EquationOfState>
+        friend hFGMThermo operator+ <EquationOfState>
         (
-            const janafThermo&,
-            const janafThermo&
+            const hFGMThermo&,
+            const hFGMThermo&
         );
 
-        friend janafThermo operator- <EquationOfState>
+        friend hFGMThermo operator- <EquationOfState>
         (
-            const janafThermo&,
-            const janafThermo&
+            const hFGMThermo&,
+            const hFGMThermo&
         );
 
-        friend janafThermo operator* <EquationOfState>
+        friend hFGMThermo operator* <EquationOfState>
         (
             const scalar,
-            const janafThermo&
+            const hFGMThermo&
         );
 
-        friend janafThermo operator== <EquationOfState>
+        friend hFGMThermo operator== <EquationOfState>
         (
-            const janafThermo&,
-            const janafThermo&
+            const hFGMThermo&,
+            const hFGMThermo&
         );
 
 
@@ -240,7 +240,7 @@ public:
         friend Ostream& operator<< <EquationOfState>
         (
             Ostream&,
-            const janafThermo&
+            const hFGMThermo&
         );
 };
 
@@ -251,10 +251,10 @@ public:
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-#include "janafThermoI.H"
+#include "hFGMThermoI.H"
 
 #ifdef NoRepository
-#   include "janafThermo.C"
+#   include "hFGMThermo.C"
 #endif
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
