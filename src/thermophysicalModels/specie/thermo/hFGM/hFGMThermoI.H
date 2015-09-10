@@ -163,7 +163,9 @@ inline Foam::scalar Foam::hFGMThermo<EquationOfState>::cp
     const scalar T
 ) const
 {
-    return 2200;
+    scalar cp_output;
+    cp_output = 2200;
+    return cp_output;
 //   const coeffArray& a = coeffs(T);
 //   return this->RR*((((a[4]*T + a[3])*T + a[2])*T + a[1])*T + a[0]);
 }
